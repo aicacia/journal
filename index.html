@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="w-full h-full bg-gray-200" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="manifest" href="/journal/manifest.json" />
+		<link rel="icon" href="/journal/favicon.png" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://nominatim.openstreetmap.org; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://nominatim.openstreetmap.org 'sha256-tS8BWqwjl52p2DPcuNPYq0zmyru2H/Ja1NpyozhqZAA=' 'sha256-2K+Q1HblWHh+FAtnB0PsO3zyqNXm1Ydt4pXUsIYDrO8='">
+	<link rel="modulepreload" href="/journal/internal/immutable/start-c62c3b31.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/index-3bb50581.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/paths-6c6300f9.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/preload-helper-efba26b0.js">
+			<script>
+		if ('serviceWorker' in navigator) {
+			addEventListener('load', () => {
+				navigator.serviceWorker.register('/journal/service-worker.js');
+			});
+		}
+	</script>
+	</head>
+	<body class="w-full h-full">
+		
+		<script type="module" data-sveltekit-hydrate="45h">
+		import { start } from "/journal/internal/immutable/start-c62c3b31.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
+			paths: {"base":"/journal","assets":"/journal"},
+			session: {},
+			route: true,
+			spa: true,
+			trailing_slash: "never",
+			hydrate: null
+		});
+	</script>
+	</body>
+</html>
