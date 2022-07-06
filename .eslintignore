@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+/.svelte-kit
+/.vscode
+/build
+/functions
+/src-tauri/target/
+WixTools
+.env
+!.env.example
