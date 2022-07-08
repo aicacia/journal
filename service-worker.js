@@ -1,9 +1,9 @@
 const build = [
-  "/journal/internal/immutable/start-c2db7aac.js",
-  "/journal/internal/immutable/pages/__layout.svelte-677ba5ba.js",
-  "/journal/internal/immutable/assets/pages/__layout.svelte-41c855d3.css",
-  "/journal/internal/immutable/error.svelte-f36ca8f6.js",
-  "/journal/internal/immutable/pages/index.svelte-e560c12d.js",
+  "/journal/internal/immutable/start-8fe93f01.js",
+  "/journal/internal/immutable/pages/__layout.svelte-f14c2361.js",
+  "/journal/internal/immutable/assets/pages/__layout.svelte-4b757bc7.css",
+  "/journal/internal/immutable/error.svelte-2b134ff0.js",
+  "/journal/internal/immutable/pages/index.svelte-66e5dd0f.js",
   "/journal/internal/immutable/assets/pages/index.svelte-d3d70323.css",
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-30da91e8.woff",
@@ -64,12 +64,12 @@ const build = [
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-71d517d6.woff2",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-e14fed02.woff",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/pages/privacy-policy.svelte-3da7006c.js",
-  "/journal/internal/immutable/pages/terms-of-service.svelte-aaff1df2.js",
-  "/journal/internal/immutable/chunks/index-3bb50581.js",
-  "/journal/internal/immutable/chunks/paths-6c6300f9.js",
+  "/journal/internal/immutable/pages/privacy-policy.svelte-bcc5b130.js",
+  "/journal/internal/immutable/pages/terms-of-service.svelte-c20710f4.js",
+  "/journal/internal/immutable/chunks/index-e2079ea1.js",
+  "/journal/internal/immutable/chunks/paths-4ab9bda2.js",
   "/journal/internal/immutable/chunks/preload-helper-efba26b0.js",
-  "/journal/internal/immutable/chunks/Layout-61221dd9.js",
+  "/journal/internal/immutable/chunks/Layout-78e7a03d.js",
   "/journal/internal/immutable/assets/Layout-14f30235.css",
   "/journal/internal/immutable/chunks/widget-bc58238e.js",
   "/journal/internal/immutable/chunks/prism-abap.min-c17849f5.js",
@@ -369,7 +369,7 @@ const files = [
   "/journal/manifest.json",
   "/journal/robots.txt"
 ];
-const version = "1657108704751";
+const version = "1657280522141";
 const worker = self;
 const FILES = `cache${version}`;
 const toCache = build.concat(files);
