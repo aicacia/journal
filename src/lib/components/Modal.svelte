@@ -25,9 +25,11 @@
 	<div class="relative z-10" role="dialog" aria-modal="true">
 		<div class="fixed inset-0 bg-gray-500 bg-opacity-25" class:hidden={!open} />
 		<div class="fixed z-10 inset-0 overflow-y-auto" class:hidden={!open}>
-			<div class="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
-				<div class="relative bg-white text-left overflow-hidden shadow-xl sm:my-8 sm:container">
-					<div class="flex items-start justify-between px-4 pt-4">
+			<div class="flex justify-center min-h-full p-4 text-center sm:p-0">
+				<div
+					class="flex flex-col min-h-full flex-grow relative bg-white text-left overflow-hidden shadow-xl sm:container"
+				>
+					<div class="flex flex-row flex-shrink items-start justify-between px-4 pt-4">
 						<div class="flex-grow">
 							{#key key}
 								<slot name="title" />
@@ -40,7 +42,7 @@
 							<div class="w-6 h-6"><MdClose /></div>
 						</button>
 					</div>
-					<div class="relative p-4 flex-auto">
+					<div class="relative p-4 flex-col flex-grow">
 						{#key key}
 							<slot />
 						{/key}

@@ -67,25 +67,27 @@
 		{journalEntry?.createdAt.toLocaleTimeString()}
 	</h1>
 	{#if journalEntry}
-		<div>
-			<label for="location" class="label">Location</label>
-			<div class="flex">
-				<input class="input grow" name="location" bind:value={journalEntry.location} />
-				<button
-					type="button shrink"
-					class="btn primary"
-					on:click={onGetLocation}
-					disabled={getttingLocation}>Current</button
-				>
+		<div class="flex flex-col flex-grow min-h-full">
+			<div class="flex flex-col flex-shrink-0">
+				<label for="location" class="label">Location</label>
+				<div class="flex">
+					<input class="input grow" name="location" bind:value={journalEntry.location} />
+					<button
+						type="button shrink"
+						class="btn primary"
+						on:click={onGetLocation}
+						disabled={getttingLocation}>Current</button
+					>
+				</div>
 			</div>
-		</div>
-		<div>
-			<label for="entry" class="label">Entry</label>
-			<RichEditor bind:value={journalEntry.content} name="entry" autoFocus />
-		</div>
-		<div class="flex justify-between">
-			<button type="button" class="btn danger" on:click={onDelete}>Delete</button>
-			<button type="button" class="btn primary" on:click={onUpdate}>Update</button>
+			<div class="flex flex-col flex-grow mt-2">
+				<label for="entry" class="label">Entry</label>
+				<RichEditor bind:value={journalEntry.content} name="entry" autoFocus />
+			</div>
+			<div class="flex flex-row flex-shrink-0 justify-between">
+				<button type="button" class="btn danger" on:click={onDelete}>Delete</button>
+				<button type="button" class="btn primary" on:click={onUpdate}>Update</button>
+			</div>
 		</div>
 	{/if}
 </Modal>

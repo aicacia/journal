@@ -41,23 +41,25 @@
 
 <Modal bind:open>
 	<h1 slot="title">{$currentDate.toLocaleDateString()} {$currentDate.toLocaleTimeString()}</h1>
-	<div>
-		<label for="location" class="label">Location</label>
-		<div class="flex">
-			<input class="input grow" name="location" bind:value={location} />
-			<button
-				type="button shrink"
-				class="btn primary"
-				on:click={onGetLocation}
-				disabled={getttingLocation}>Current</button
-			>
+	<div class="flex flex-col flex-grow min-h-full">
+		<div class="flex flex-col flex-shrink-0">
+			<label for="location" class="label">Location</label>
+			<div class="flex">
+				<input class="input grow" name="location" bind:value={location} />
+				<button
+					type="button shrink"
+					class="btn primary"
+					on:click={onGetLocation}
+					disabled={getttingLocation}>Current</button
+				>
+			</div>
 		</div>
-	</div>
-	<div>
-		<label for="entry" class="label">Entry</label>
-		<RichEditor bind:value={content} name="entry" autoFocus />
-	</div>
-	<div class="flex justify-end">
-		<button type="button" class="btn primary" on:click={onCreate}>Create</button>
+		<div class="flex flex-col flex-grow mt-2">
+			<label for="entry" class="label">Entry</label>
+			<RichEditor bind:value={content} name="entry" autoFocus />
+		</div>
+		<div class="flex flex-row flex-shrink-0 justify-end">
+			<button type="button" class="btn primary" on:click={onCreate}>Create</button>
+		</div>
 	</div>
 </Modal>
