@@ -5,8 +5,6 @@
 	import { flip } from 'svelte/animate';
 	import { notifications } from '$lib/state/notifications';
 	import Notification from './Notification.svelte';
-
-	$: console.log($notifications);
 </script>
 
 <div class="as-fixed as-top-0 as-left-0 z-20 as-w-full">

@@ -63,24 +63,29 @@ export interface IJournalEntry {
 export type IJournalEntryJSON = IAsJSON<IJournalEntry>;
 
 export function journalEntryToJSON(journalEntry: IJournalEntry): IJournalEntryJSON {
-	return {
+	const journalEntryJSON: IJournalEntryJSON = {
 		id: journalEntry.id,
-		geolocation: journalEntry.geolocation
-			? {
-					accuracy: journalEntry.geolocation.accuracy,
-					altitude: journalEntry.geolocation.altitude,
-					altitudeAccuracy: journalEntry.geolocation.altitudeAccuracy,
-					heading: journalEntry.geolocation.heading,
-					latitude: journalEntry.geolocation.latitude,
-					longitude: journalEntry.geolocation.longitude,
-					speed: journalEntry.geolocation.speed
-			  }
-			: undefined,
-		location: journalEntry.location,
 		content: journalEntry.content,
 		createdAt: journalEntry.createdAt.toJSON(),
 		updatedAt: journalEntry.updatedAt.toJSON()
 	};
+
+	if (journalEntry.geolocation) {
+		journalEntryJSON.geolocation = {
+			accuracy: journalEntry.geolocation.accuracy,
+			altitude: journalEntry.geolocation.altitude,
+			altitudeAccuracy: journalEntry.geolocation.altitudeAccuracy,
+			heading: journalEntry.geolocation.heading,
+			latitude: journalEntry.geolocation.latitude,
+			longitude: journalEntry.geolocation.longitude,
+			speed: journalEntry.geolocation.speed
+		};
+	}
+	if (journalEntry.location) {
+		journalEntryJSON.location = journalEntry.location;
+	}
+
+	return journalEntryJSON;
 }
 
 export function journalEntryFromJSON(journalEntry: IJournalEntryJSON): IJournalEntry {
