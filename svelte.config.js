@@ -25,6 +25,7 @@ const config = {
 					'https://www.googleapis.com',
 					'https://nominatim.openstreetmap.org'
 				],
+				'font-src': ['self', 'blob:', 'data:'],
 				'style-src': ['self', 'unsafe-inline']
 			}
 		},
