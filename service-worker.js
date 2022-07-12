@@ -1,9 +1,9 @@
 const build = [
-  "/journal/internal/immutable/start-8fe93f01.js",
+  "/journal/internal/immutable/start-7ea296db.js",
   "/journal/internal/immutable/pages/__layout.svelte-f14c2361.js",
   "/journal/internal/immutable/assets/pages/__layout.svelte-4b757bc7.css",
   "/journal/internal/immutable/error.svelte-2b134ff0.js",
-  "/journal/internal/immutable/pages/index.svelte-66e5dd0f.js",
+  "/journal/internal/immutable/pages/index.svelte-701b1492.js",
   "/journal/internal/immutable/assets/pages/index.svelte-d3d70323.css",
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-30da91e8.woff",
@@ -64,12 +64,12 @@ const build = [
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-71d517d6.woff2",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-e14fed02.woff",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/pages/privacy-policy.svelte-bcc5b130.js",
-  "/journal/internal/immutable/pages/terms-of-service.svelte-c20710f4.js",
+  "/journal/internal/immutable/pages/privacy-policy.svelte-e398d046.js",
+  "/journal/internal/immutable/pages/terms-of-service.svelte-b0cbe83d.js",
   "/journal/internal/immutable/chunks/index-e2079ea1.js",
   "/journal/internal/immutable/chunks/paths-4ab9bda2.js",
   "/journal/internal/immutable/chunks/preload-helper-efba26b0.js",
-  "/journal/internal/immutable/chunks/Layout-78e7a03d.js",
+  "/journal/internal/immutable/chunks/Layout-d7f4229a.js",
   "/journal/internal/immutable/assets/Layout-14f30235.css",
   "/journal/internal/immutable/chunks/widget-bc58238e.js",
   "/journal/internal/immutable/chunks/prism-abap.min-c17849f5.js",
@@ -369,7 +369,7 @@ const files = [
   "/journal/manifest.json",
   "/journal/robots.txt"
 ];
-const version = "1657280522141";
+const version = "1657626459996";
 const worker = self;
 const FILES = `cache${version}`;
 const toCache = build.concat(files);
