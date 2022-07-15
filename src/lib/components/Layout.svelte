@@ -7,7 +7,7 @@
 
 <div class="relative flex w-full h-full">
 	<div class="flex flex-col w-full h-full">
-		<div class="flex flex-col flex-grow">
+		<div class="flex flex-col flex-grow overflow-hidden">
 			<slot />
 		</div>
 		<Footer />

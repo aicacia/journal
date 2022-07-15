@@ -14,16 +14,16 @@
 	}
 </script>
 
-<div class="flex flex-row justify-between">
-	<div class="flex justify-start">
-		<button class="btn primary px-4 mr-14" on:click={onToday}>Today</button>
+<div class="flex flex-col sm:flex-row justify-between">
+	<div class="flex justify-center sm:justify-start">
+		<button class="btn primary px-4" on:click={onToday}>Today</button>
 	</div>
 	<div class="flex-1">
 		<div class="flex justify-center">
 			<PrevNextMonth />
 		</div>
 	</div>
-	<div class="flex justify-end">
+	<div class="flex justify-center sm:justify-end">
 		<button class="btn primary px-4" on:click={onOpenCreate}>Create Entry</button>
 	</div>
 </div>

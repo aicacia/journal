@@ -9,7 +9,6 @@ import { browser } from '$app/env';
 import { getYearMonth } from '$lib/util';
 
 remoteStorage.access.claim('journal', 'rw');
-remoteStorage.caching.enable('/journal/');
 
 export const SCHEMA_NAME = 'journal-entry';
 export const journalRS = remoteStorage.scope('/journal/');
@@ -122,6 +121,10 @@ export const journalByMonth = derived(writableJournal, (state) =>
 	}, {} as { [month: string]: { [day: string]: IJournalEntry[] } })
 );
 
+const writableMonthsLoading = writable(new Set<string>());
+
+export const monthsLoading = derived(writableMonthsLoading, (state) => new Set(state));
+
 export interface IAddJournalEntry {
 	content: any[];
 	geolocation?: GeolocationCoordinates;
@@ -214,27 +217,68 @@ async function rsDeleteJournalEntry(journalEntry: IJournalEntry) {
 }
 
 async function onSync(date: Date) {
-	const month = getYearMonth(date);
-	const byMonth = (get(journalByMonth) || {})[month] || {};
-	if (!Object.keys(byMonth).length) {
-		const journal = (await journalRS.getAll(`${month}/`, false)) as IJournalJSON;
+	if (remoteStorage.connected) {
+		const month = getYearMonth(date);
+		const byMonth = (get(journalByMonth) || {})[month] || {};
 
-		writableJournal.update((state) => {
-			const newState = { ...state };
-			Object.values(journal).forEach((journalEntry) => {
-				const prevJournalEntry = newState[journalEntry.id],
-					newJournalEntry = journalEntryFromJSON(journalEntry);
+		if (!get(writableMonthsLoading).has(month) && !Object.keys(byMonth).length) {
+			let journal: IJournalJSON = {};
 
-				if (!prevJournalEntry || prevJournalEntry.updatedAt < newJournalEntry.updatedAt) {
-					newState[journalEntry.id] = newJournalEntry;
-				}
+			try {
+				writableMonthsLoading.update((state) => {
+					state.add(month);
+					return state;
+				});
+				journal = (await journalRS.getAll(`${month}/`, false)) as IJournalJSON;
+			} finally {
+				writableMonthsLoading.update((state) => {
+					state.delete(month);
+					return state;
+				});
+			}
+
+			writableJournal.update((state) => {
+				const newState = { ...state };
+				Object.values(journal).forEach((journalEntry) => {
+					const prevJournalEntry = newState[journalEntry.id],
+						newJournalEntry = journalEntryFromJSON(journalEntry);
+
+					if (!prevJournalEntry || prevJournalEntry.updatedAt < newJournalEntry.updatedAt) {
+						newState[journalEntry.id] = newJournalEntry;
+					}
+				});
+				return newState;
 			});
-			return newState;
-		});
+		}
 	}
 }
-remoteStorage.on('sync-done', () => onSync(get(currentDate)));
+
+async function onDateChange(date: Date) {
+	if (remoteStorage.connected) {
+		const month = getYearMonth(date);
+		const byMonth = (get(journalByMonth) || {})[month] || {};
+
+		if (!get(writableMonthsLoading).has(month) && !Object.keys(byMonth).length) {
+			writableMonthsLoading.update((state) => {
+				state.add(month);
+				return state;
+			});
+			function onSyncDone() {
+				remoteStorage.on('sync-done', onSyncDone);
+				writableMonthsLoading.update((state) => {
+					state.delete(month);
+					return state;
+				});
+				onSync(date);
+			}
+			remoteStorage.on('sync-done', onSyncDone);
+			remoteStorage.caching.set(`/journal/${month}/`, 'ALL');
+		}
+	}
+}
+
+remoteStorage.on('connected', () => onDateChange(get(currentDate)));
 
 if (browser) {
-	derived(currentDate, onSync).subscribe(() => {});
+	derived(currentDate, onDateChange).subscribe(() => {});
 }

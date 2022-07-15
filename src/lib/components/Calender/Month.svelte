@@ -28,14 +28,16 @@
 	$: nextMonthDays = daysToFill > 0 ? range(1, daysToFill).iter().toArray() : [];
 </script>
 
-<div class="w-full h-full grid grid-cols-7 border-b border-r border-gray-300">
-	{#each prevMonthDays as day}
-		<MonthDay date={new Date(date.getFullYear(), date.getMonth() - 1, day)} {today} {onSelect} />
-	{/each}
-	{#each days as day}
-		<MonthDay date={new Date(date.getFullYear(), date.getMonth(), day)} {today} {onSelect} />
-	{/each}
-	{#each nextMonthDays as day}
-		<MonthDay date={new Date(date.getFullYear(), date.getMonth() + 1, day)} {today} {onSelect} />
-	{/each}
+<div class="w-full h-full overflow-x-hidden overflow-y-auto">
+	<div class="w-full h-full grid grid-cols-1 sm:grid-cols-7 border-b border-r border-gray-300">
+		{#each prevMonthDays as day}
+			<MonthDay date={new Date(date.getFullYear(), date.getMonth() - 1, day)} {today} {onSelect} />
+		{/each}
+		{#each days as day}
+			<MonthDay date={new Date(date.getFullYear(), date.getMonth(), day)} {today} {onSelect} />
+		{/each}
+		{#each nextMonthDays as day}
+			<MonthDay date={new Date(date.getFullYear(), date.getMonth() + 1, day)} {today} {onSelect} />
+		{/each}
+	</div>
 </div>
