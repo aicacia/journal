@@ -13,16 +13,16 @@ const remoteStorageStateWritable = writable<IRemoteStorageState>({
 
 export const remoteStorageState = derived(remoteStorageStateWritable, (state) => state);
 
-remoteStorage.on('connected', () => {
+remoteStorage.addEventListener('connected', () => {
 	updateState('storage', 'connected');
 });
-remoteStorage.on('disconnected', () => {
+remoteStorage.addEventListener('disconnected', () => {
 	updateState('storage', 'disconnected');
 });
-remoteStorage.on('wire-busy', () => {
+remoteStorage.addEventListener('wire-busy', () => {
 	updateState('wire', 'syncing');
 });
-remoteStorage.on('wire-done', () => {
+remoteStorage.addEventListener('wire-done', () => {
 	updateState('wire', 'idle');
 });
 

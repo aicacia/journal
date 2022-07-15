@@ -264,20 +264,20 @@ async function onDateChange(date: Date) {
 				return state;
 			});
 			function onSyncDone() {
-				remoteStorage.on('sync-done', onSyncDone);
+				remoteStorage.removeEventListener('sync-done', onSyncDone);
 				writableMonthsLoading.update((state) => {
 					state.delete(month);
 					return state;
 				});
 				onSync(date);
 			}
-			remoteStorage.on('sync-done', onSyncDone);
+			remoteStorage.addEventListener('sync-done', onSyncDone);
 			remoteStorage.caching.set(`/journal/${month}/`, 'ALL');
 		}
 	}
 }
 
-remoteStorage.on('connected', () => onDateChange(get(currentDate)));
+remoteStorage.addEventListener('connected', () => onDateChange(get(currentDate)));
 
 if (browser) {
 	derived(currentDate, onDateChange).subscribe(() => {});
