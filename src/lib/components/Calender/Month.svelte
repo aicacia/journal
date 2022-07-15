@@ -29,7 +29,7 @@
 </script>
 
 <div class="w-full h-full overflow-x-hidden overflow-y-auto">
-	<div class="w-full h-full grid grid-cols-1 sm:grid-cols-7 border-b border-r border-gray-300">
+	<div class="w-full h-full grid grid-cols-1 md:grid-cols-7 border-b border-r border-gray-300">
 		{#each prevMonthDays as day}
 			<MonthDay date={new Date(date.getFullYear(), date.getMonth() - 1, day)} {today} {onSelect} />
 		{/each}
