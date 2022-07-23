@@ -1,9 +1,9 @@
 const build = [
-  "/journal/internal/immutable/start-ff5cdd21.js",
+  "/journal/internal/immutable/start-ad330d24.js",
   "/journal/internal/immutable/pages/__layout.svelte-f14c2361.js",
-  "/journal/internal/immutable/assets/pages/__layout.svelte-8b9ab826.css",
+  "/journal/internal/immutable/assets/pages/__layout.svelte-9f0b4e50.css",
   "/journal/internal/immutable/error.svelte-2b134ff0.js",
-  "/journal/internal/immutable/pages/index.svelte-424a393d.js",
+  "/journal/internal/immutable/pages/index.svelte-0546f23c.js",
   "/journal/internal/immutable/assets/pages/index.svelte-d3d70323.css",
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-30da91e8.woff",
@@ -64,12 +64,12 @@ const build = [
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-71d517d6.woff2",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-e14fed02.woff",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/pages/privacy-policy.svelte-ee62886b.js",
-  "/journal/internal/immutable/pages/terms-of-service.svelte-4638bcbc.js",
+  "/journal/internal/immutable/pages/privacy-policy.svelte-d5ec9d8e.js",
+  "/journal/internal/immutable/pages/terms-of-service.svelte-be39eba7.js",
   "/journal/internal/immutable/chunks/index-e2079ea1.js",
   "/journal/internal/immutable/chunks/paths-4ab9bda2.js",
   "/journal/internal/immutable/chunks/preload-helper-efba26b0.js",
-  "/journal/internal/immutable/chunks/Layout-5963ec57.js",
+  "/journal/internal/immutable/chunks/Layout-539f17fa.js",
   "/journal/internal/immutable/assets/Layout-14f30235.css",
   "/journal/internal/immutable/chunks/widget-bc58238e.js",
   "/journal/internal/immutable/chunks/prism-abap.min-c17849f5.js",
@@ -369,7 +369,7 @@ const files = [
   "/journal/manifest.json",
   "/journal/robots.txt"
 ];
-const version = "1657885369839";
+const version = "1658578327159";
 const worker = self;
 const FILES = `cache${version}`;
 const toCache = build.concat(files);
