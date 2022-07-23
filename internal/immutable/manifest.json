@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-ad330d24.js",
+    "file": "start-4cf0679d.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -25,7 +25,7 @@
       "_index-e2079ea1.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-9f0b4e50.css"
+      "assets/pages/__layout.svelte-b792815e.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -38,13 +38,13 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-0546f23c.js",
+    "file": "pages/index.svelte-888b5069.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-e2079ea1.js",
-      "_Layout-539f17fa.js",
+      "_Layout-633a5b28.js",
       "_paths-4ab9bda2.js",
       "_preload-helper-efba26b0.js"
     ],
@@ -407,25 +407,25 @@
     ]
   },
   "src/routes/privacy-policy.svelte": {
-    "file": "pages/privacy-policy.svelte-d5ec9d8e.js",
+    "file": "pages/privacy-policy.svelte-cdfb4af2.js",
     "src": "src/routes/privacy-policy.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-e2079ea1.js",
       "_paths-4ab9bda2.js",
-      "_Layout-539f17fa.js"
+      "_Layout-633a5b28.js"
     ]
   },
   "src/routes/terms-of-service.svelte": {
-    "file": "pages/terms-of-service.svelte-be39eba7.js",
+    "file": "pages/terms-of-service.svelte-6fc20c20.js",
     "src": "src/routes/terms-of-service.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-e2079ea1.js",
       "_paths-4ab9bda2.js",
-      "_Layout-539f17fa.js"
+      "_Layout-633a5b28.js"
     ]
   },
   "_index-e2079ea1.js": {
@@ -440,8 +440,8 @@
   "_preload-helper-efba26b0.js": {
     "file": "chunks/preload-helper-efba26b0.js"
   },
-  "_Layout-539f17fa.js": {
-    "file": "chunks/Layout-539f17fa.js",
+  "_Layout-633a5b28.js": {
+    "file": "chunks/Layout-633a5b28.js",
     "imports": [
       "_index-e2079ea1.js",
       "_paths-4ab9bda2.js"
