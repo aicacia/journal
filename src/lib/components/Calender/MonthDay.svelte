@@ -10,10 +10,11 @@
 	export let onSelect: (journalEntry: IJournalEntry) => void = () => {};
 
 	$: isToday = isSameDay(date, today);
-	$: entries = ($journalByMonth[date.toISOString().slice(0, 7)] || {})[date.getDate()] || [];
+	$: entries = ($journalByMonth[date.toISOString().substring(0, 7)] || {})[date.getDate()] || [];
+	$: id = date.toISOString().substring(0, 10);
 </script>
 
-<div class="p-2 border-t border-l border-gray-300">
+<div {id} class="p-2 border-t border-l border-gray-300">
 	<p class="text-xs text-center">
 		{getDaySortName($locale, date)}
 		<span

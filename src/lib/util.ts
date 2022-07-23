@@ -2,11 +2,11 @@ import { hashOf } from '@aicacia/hash';
 import { XorShiftRng } from '@aicacia/rand';
 
 export function createInsecureID() {
-	return Math.random().toString(36).slice(2);
+	return Math.random().toString(36).substring(2);
 }
 
 export function getYearMonth(date: Date) {
-	return date.toISOString().slice(0, 7);
+	return date.toISOString().substring(0, 7);
 }
 
 export function getDaysInMonth(date: Date) {

@@ -1,7 +1,6 @@
 <svelte:options immutable />
 
 <script lang="ts">
-	import { currentDate } from '$lib/state/currentDate';
 	import Modal from './Modal.svelte';
 	import RichEditor from './editor/RichEditor.svelte';
 	import { deleteJournalEntry, updateJournalEntry, type IJournalEntry } from '$lib/state/journal';
@@ -10,6 +9,7 @@
 
 	export let journalEntry: IJournalEntry | undefined;
 	export let open = false;
+	export let deleteOpen = false;
 
 	async function onUpdate() {
 		if (!journalEntry) {
@@ -29,6 +29,13 @@
 		}
 	}
 
+	function onOpenDelete() {
+		deleteOpen = true;
+	}
+	function onCloseDelete() {
+		deleteOpen = false;
+	}
+
 	async function onDelete() {
 		if (!journalEntry) {
 			return;
@@ -37,6 +44,7 @@
 			await deleteJournalEntry(journalEntry.id);
 			journalEntry = undefined;
 			open = false;
+			deleteOpen = false;
 		} catch (e) {
 			console.error(e);
 			createNotification((e as Error).message);
@@ -85,9 +93,23 @@
 				<RichEditor bind:value={journalEntry.content} name="entry" autoFocus />
 			</div>
 			<div class="flex flex-row flex-shrink-0 justify-between">
-				<button type="button" class="btn danger" on:click={onDelete}>Delete</button>
+				<button type="button" class="btn danger" on:click={onOpenDelete}>Delete</button>
 				<button type="button" class="btn primary" on:click={onUpdate}>Update</button>
 			</div>
+		</div>
+	{/if}
+</Modal>
+
+<Modal bind:open={deleteOpen} small>
+	<h1 slot="title">
+		Delete Entry For
+		{journalEntry?.createdAt.toLocaleDateString()}
+		{journalEntry?.createdAt.toLocaleTimeString()}
+	</h1>
+	{#if journalEntry}
+		<div class="flex flex-row flex-shrink-0 justify-between">
+			<button type="button" class="btn secondary" on:click={onCloseDelete}>Cancel</button>
+			<button type="button" class="btn danger" on:click={onDelete}>Delete</button>
 		</div>
 	{/if}
 </Modal>

@@ -82,7 +82,14 @@
 			<Buttons />
 		</div>
 	</HoveringToolbar>
-	<div use:longpress {id} {name} on:longpress={onLongPress}>
-		<Editable bind:ref {autoFocus} {readOnly} {placeholder} {onKeyDown} />
+	<div class="flex flex-grow" use:longpress {id} {name} on:longpress={onLongPress}>
+		<Editable
+			bind:ref
+			class="flex flex-grow flex-col"
+			{autoFocus}
+			{readOnly}
+			{placeholder}
+			{onKeyDown}
+		/>
 	</div>
 </Slate>

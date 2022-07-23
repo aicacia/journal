@@ -4,9 +4,13 @@
 	import PrevNextMonth from './PrevNextMonth.svelte';
 	import { setCurrentDate } from '$lib/state/currentDate';
 	import CreateEntry from './CreateEntry.svelte';
+	import { tick } from 'svelte';
 
-	function onToday() {
-		setCurrentDate(new Date());
+	async function onToday() {
+		const today = new Date();
+		setCurrentDate(today);
+		await tick();
+		document.getElementById(today.toISOString().substring(0, 10))?.scrollIntoView();
 	}
 	let open = false;
 	function onOpenCreate() {

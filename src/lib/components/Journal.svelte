@@ -6,6 +6,8 @@
 	import Controls from './Controls.svelte';
 	import type { IJournalEntry } from '$lib/state/journal';
 	import UpdateEntry from './UpdateEntry.svelte';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/env';
 
 	let today = new Date();
 	let selecteJournalEntry: IJournalEntry | undefined;
@@ -17,6 +19,12 @@
 		selecteJournalEntry = journalEntry;
 		updateOpen = true;
 	}
+
+	onMount(() => {
+		if (browser) {
+			document.getElementById(today.toISOString().substring(0, 10))?.scrollIntoView();
+		}
+	});
 </script>
 
 <svelte:window bind:innerWidth />

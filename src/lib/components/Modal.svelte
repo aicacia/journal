@@ -6,6 +6,7 @@
 	import { createInsecureID } from '$lib/util';
 
 	export let onClose: () => void = () => undefined;
+	export let small = false;
 	export let open = false;
 
 	let key = createInsecureID();
@@ -25,9 +26,10 @@
 	<div class="relative z-10" role="dialog" aria-modal="true">
 		<div class="fixed inset-0 bg-gray-500 bg-opacity-25" class:hidden={!open} />
 		<div class="fixed z-10 inset-0 overflow-y-auto" class:hidden={!open}>
-			<div class="flex justify-center min-h-full p-4 text-center sm:p-0">
+			<div class="flex justify-center content-center text-center h-full p-4 sm:p-0">
 				<div
-					class="flex flex-col min-h-full flex-grow relative bg-white text-left overflow-hidden shadow-xl sm:container"
+					class="flex flex-col relative bg-white text-left overflow-hidden shadow-xl sm:container"
+					class:m-auto={small}
 				>
 					<div class="flex flex-row flex-shrink items-start justify-between px-4 pt-4">
 						<div class="flex-grow">
