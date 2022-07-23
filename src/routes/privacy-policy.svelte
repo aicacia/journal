@@ -5,7 +5,7 @@
 </script>
 
 <Layout>
-	<div class="container mx-auto p-4 mt-4 mb-8 bg-white">
+	<div class="container mx-auto p-4 mt-4 mb-8">
 		<h1 class="text-2xl">Privacy Policy</h1>
 		<hr />
 		<p>

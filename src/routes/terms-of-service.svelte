@@ -5,7 +5,7 @@
 </script>
 
 <Layout>
-	<div class="container mx-auto p-4 mt-4 mb-8 bg-white">
+	<div class="container mx-auto p-4 mt-4 mb-8">
 		<h1 class="text-2xl">Terms of Service</h1>
 		<hr />
 		<p>Simple Terms of Service, do what you want with this.</p>
