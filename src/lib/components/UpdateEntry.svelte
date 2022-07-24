@@ -2,10 +2,9 @@
 
 <script lang="ts">
 	import Modal from './Modal.svelte';
-	import RichEditor from './editor/RichEditor.svelte';
 	import { deleteJournalEntry, updateJournalEntry, type IJournalEntry } from '$lib/state/journal';
 	import { createNotification } from '$lib/state/notifications';
-	import { getLocation, getLocationName } from '$lib/util';
+	import EntryEditor from './EntryEditor.svelte';
 
 	export let journalEntry: IJournalEntry | undefined;
 	export let open = false;
@@ -50,23 +49,6 @@
 			createNotification((e as Error).message);
 		}
 	}
-
-	let getttingLocation = false;
-	async function onGetLocation() {
-		if (!journalEntry) {
-			return;
-		}
-		getttingLocation = true;
-		try {
-			journalEntry.geolocation = await getLocation();
-			journalEntry.location = await getLocationName(journalEntry.geolocation);
-		} catch (e) {
-			console.error(e);
-			createNotification((e as Error).message);
-		} finally {
-			getttingLocation = false;
-		}
-	}
 </script>
 
 <Modal bind:open>
@@ -76,22 +58,7 @@
 	</h1>
 	{#if journalEntry}
 		<div class="flex flex-col flex-grow min-h-full">
-			<div class="flex flex-col flex-shrink-0">
-				<label for="location" class="label">Location</label>
-				<div class="flex">
-					<input class="input grow" name="location" bind:value={journalEntry.location} />
-					<button
-						type="button shrink"
-						class="btn primary"
-						on:click={onGetLocation}
-						disabled={getttingLocation}>Current</button
-					>
-				</div>
-			</div>
-			<div class="flex flex-col flex-grow mt-2">
-				<label for="entry" class="label">Entry</label>
-				<RichEditor bind:value={journalEntry.content} name="entry" autoFocus />
-			</div>
+			<EntryEditor bind:journalEntry />
 			<div class="flex flex-row flex-shrink-0 justify-between">
 				<button type="button" class="btn danger" on:click={onOpenDelete}>Delete</button>
 				<button type="button" class="btn primary" on:click={onUpdate}>Update</button>

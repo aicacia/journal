@@ -3,7 +3,6 @@ import { writable } from 'svelte/store';
 import type { IAsJSON } from '@aicacia/json';
 import { v4 } from 'uuid';
 import { remoteStorage } from '../remoteStorage';
-import { wrap } from './tasks';
 import { currentDate } from './currentDate';
 import { browser } from '$app/env';
 import { getYearMonth } from '$lib/util';
@@ -202,18 +201,16 @@ export async function deleteJournalEntry(id: string) {
 
 async function rsStoreJournalEntry(journalEntry: IJournalEntry) {
 	const month = journalEntry.createdAt.toISOString().substring(0, 7);
-	await wrap(
-		journalRS.storeObject(
-			SCHEMA_NAME,
-			`${month}/${journalEntry.id}.json`,
-			journalEntryToJSON(journalEntry)
-		)
+	await journalRS.storeObject(
+		SCHEMA_NAME,
+		`${month}/${journalEntry.id}.json`,
+		journalEntryToJSON(journalEntry)
 	);
 }
 
 async function rsDeleteJournalEntry(journalEntry: IJournalEntry) {
 	const month = getYearMonth(journalEntry.createdAt);
-	await wrap(journalRS.remove(`${month}/${journalEntry.id}.json`));
+	await journalRS.remove(`${month}/${journalEntry.id}.json`);
 }
 
 async function onSync(date: Date) {
