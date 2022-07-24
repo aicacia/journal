@@ -26,6 +26,8 @@
 		<div class="flex flex-col justify-center px-2">
 			{#if $loading}
 				<Spinner />
+			{:else}
+				<div class="w-8 h-8" />
 			{/if}
 		</div>
 	</div>
