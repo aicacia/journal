@@ -10,6 +10,7 @@
 	import { tick } from 'svelte';
 	import { page } from '$app/stores';
 	import Dropdown from './Dropdown.svelte';
+	import { base } from '$app/paths';
 
 	export let months = true;
 
@@ -31,8 +32,8 @@
 		<Dropdown>
 			<a
 				class="p-2 flex hover:bg-gray-200"
-				class:bg-gray-200={$page.url.pathname === '/'}
-				href="/"
+				class:bg-gray-200={$page.url.pathname === `${base}/`}
+				href={`${base}/`}
 				role="menuitem"
 				tabindex="-1"
 				><span class="inline-block w-6 h-6"><FaRegCalendarAlt /></span>
@@ -40,8 +41,8 @@
 			>
 			<a
 				class="p-2 flex hover:bg-gray-200"
-				class:bg-gray-200={$page.url.pathname === '/book'}
-				href="/book"
+				class:bg-gray-200={$page.url.pathname === `${base}/book`}
+				href={`${base}/book`}
 				role="menuitem"
 				tabindex="-1"
 				><span class="inline-block w-6 h-6"><FaBook /></span>
@@ -49,8 +50,8 @@
 			>
 			<a
 				class="p-2 flex hover:bg-gray-200"
-				class:bg-gray-200={$page.url.pathname === '/map'}
-				href="/map"
+				class:bg-gray-200={$page.url.pathname === `${base}/map`}
+				href={`${base}/map`}
 				role="menuitem"
 				tabindex="-1"
 				><span class="inline-block w-6 h-6"><MdMap /></span>
