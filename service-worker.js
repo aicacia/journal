@@ -58,13 +58,13 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-500e04d5.ttf",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-c647367d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/start-46491b97.js",
+  "/journal/internal/immutable/start-414b505d.js",
   "/journal/internal/immutable/pages/__layout.svelte-5da5a1bb.js",
   "/journal/internal/immutable/assets/__layout-708843c4.css",
   "/journal/internal/immutable/error.svelte-a8b24a76.js",
   "/journal/internal/immutable/pages/book.svelte-79ab2594.js",
   "/journal/internal/immutable/pages/index.svelte-cce6a628.js",
-  "/journal/internal/immutable/pages/map.svelte-9f73e63c.js",
+  "/journal/internal/immutable/pages/map.svelte-30533e8a.js",
   "/journal/internal/immutable/assets/map-3c20a24b.css",
   "/journal/internal/immutable/pages/privacy-policy.svelte-36974286.js",
   "/journal/internal/immutable/pages/terms-of-service.svelte-32c877f5.js",
@@ -372,7 +372,7 @@ const j = [
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1659889293896", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
+], s = "1659889473563", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
 m.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((a) => a.addAll(u)).then(() => {
