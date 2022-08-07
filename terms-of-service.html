@@ -6,16 +6,15 @@
 		<link rel="icon" href="/journal/favicon.png" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://nominatim.openstreetmap.org; font-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://nominatim.openstreetmap.org 'sha256-X6T8uafPwdOcJ/GU9r+dK8ywiHza41HedRCs9j1dCUQ=' 'sha256-KKiIWBiZjXFjBNeLy+D89TaPWo9W1zSYBeneCJvz4uc='">
-	<link rel="stylesheet" href="/journal/internal/immutable/assets/__layout-b618bc12.css">
-	<link rel="stylesheet" href="/journal/internal/immutable/assets/Layout-6bf551a2.css">
-	<link rel="modulepreload" href="/journal/internal/immutable/start-b35b5584.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/chunks/index-83f3453a.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/chunks/paths-ec81bac6.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/chunks/preload-helper-3fd8ba3d.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/pages/__layout.svelte-d78f2472.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/pages/terms-of-service.svelte-19b4085d.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/chunks/Layout-0030ab91.js">
+		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org; font-src 'self' blob: data:; img-src 'self' data: https://*.openstreetmap.org; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org 'sha256-IX/GSMO0CCYQ+uJTHWNi54ifwlv6zWxQRiqfkDCid3M=' 'sha256-KKiIWBiZjXFjBNeLy+D89TaPWo9W1zSYBeneCJvz4uc='">
+	<link href="/journal/internal/immutable/assets/__layout-708843c4.css" rel="stylesheet">
+	<link href="/journal/internal/immutable/assets/Layout-6bf551a2.css" rel="stylesheet">
+	<link rel="modulepreload" href="/journal/internal/immutable/start-40be98b6.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/index-8e1ea7fc.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/preload-helper-b6d3926a.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/pages/__layout.svelte-5da5a1bb.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/pages/terms-of-service.svelte-32c877f5.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/Layout-6f72e75c.js">
 			<script>
 		if ('serviceWorker' in navigator) {
 			addEventListener('load', function () {
@@ -35,19 +34,29 @@
 <div class="relative flex w-full h-full"><div class="flex flex-col w-full h-full"><div class="flex flex-col flex-grow overflow-hidden"><div class="container mx-auto p-4 mt-4 mb-8"><h1 class="text-2xl">Terms of Service</h1>
 		<hr>
 		<p>Simple Terms of Service, do what you want with this.</p>
-		<div class="text-center mt-4"><a role="button" class="underline" href="/journal/">Journal</a></div></div></div>
-		
+		<div class="text-center mt-4"><a role="button" class="underline" href="/journal/">Journal</a></div></div></div></div></div>
 
 
 
-<div class="text-center text-xs mt-8">© 2022
-	<a href="/journal">aicacia.github.io/journal</a></div>
-<div class="text-center text-xs my-2"><a target="_blank" href="https://github.com/aicacia/journal">Source Code</a>
-	|
-	<a target="_blank" href="/journal/privacy-policy">Privacy Policy</a>
-	|
-	<a target="_blank" href="/journal/terms-of-service">Terms of Service</a></div></div></div>
 
+
+<div class="absolute bottom-0 w-full flex z-[1000]"><div class="absolute bottom-0 w-full"><div class="text-center text-xs mt-8">© 2022
+			<a href="/journal">aicacia.github.io/journal</a></div>
+		<div class="text-center text-xs my-2"><a target="_blank" href="https://github.com/aicacia/journal">Source Code</a>
+			|
+			<a target="_blank" href="/journal/privacy-policy">Privacy Policy</a>
+			|
+			<a target="_blank" href="/journal/terms-of-service">Terms of Service</a></div></div>
+
+	<div class="absolute left-0 bottom-0">
+
+
+
+
+
+<div id="remote-storage-widget"></div></div>
+
+	<div class="absolute right-4 bottom-4"></div></div>
 
 
 
@@ -55,10 +64,13 @@
 <div class="as-fixed as-top-0 as-left-0 z-20 as-w-full"><div class="as-container as-mx-auto"></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1n9skek">
-		import { start } from "/journal/internal/immutable/start-b35b5584.js";
+		<script type="module" data-sveltekit-hydrate="1y6n5y6">
+		import { set_public_env, start } from "/journal/internal/immutable/start-40be98b6.js";
+
+		set_public_env({});
+
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1n9skek"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1y6n5y6"]').parentNode,
 			paths: {"base":"/journal","assets":"/journal"},
 			session: {},
 			route: true,
@@ -67,7 +79,7 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 4],
+				nodes: [0, 6],
 				params: {},
 				routeId: "terms-of-service"
 			}

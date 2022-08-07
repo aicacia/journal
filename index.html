@@ -6,11 +6,10 @@
 		<link rel="icon" href="/journal/favicon.png" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://nominatim.openstreetmap.org; font-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://nominatim.openstreetmap.org 'sha256-gOpKpFrd8ia3TnB2G7W2st99n2135FLZIsuH3pnw5uI=' 'sha256-KKiIWBiZjXFjBNeLy+D89TaPWo9W1zSYBeneCJvz4uc='">
-	<link rel="modulepreload" href="/journal/internal/immutable/start-b35b5584.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/chunks/index-83f3453a.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/chunks/paths-ec81bac6.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/chunks/preload-helper-3fd8ba3d.js">
+		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org; font-src 'self' blob: data:; img-src 'self' data: https://*.openstreetmap.org; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org 'sha256-WDGz/z7s3sfWLRJ4CDGkYNmRpcYEm+FsbB9TE4t6yLY=' 'sha256-KKiIWBiZjXFjBNeLy+D89TaPWo9W1zSYBeneCJvz4uc='">
+	<link rel="modulepreload" href="/journal/internal/immutable/start-40be98b6.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/index-8e1ea7fc.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/preload-helper-b6d3926a.js">
 			<script>
 		if ('serviceWorker' in navigator) {
 			addEventListener('load', function () {
@@ -22,7 +21,10 @@
 	<body class="w-full h-full">
 		
 		<script type="module" data-sveltekit-hydrate="45h">
-		import { start } from "/journal/internal/immutable/start-b35b5584.js";
+		import { set_public_env, start } from "/journal/internal/immutable/start-40be98b6.js";
+
+		set_public_env({});
+
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
 			paths: {"base":"/journal","assets":"/journal"},

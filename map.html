@@ -6,14 +6,17 @@
 		<link rel="icon" href="/journal/favicon.png" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org; font-src 'self' blob: data:; img-src 'self' data: https://*.openstreetmap.org; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org 'sha256-uyYM4JzCSvOr1V5O6wPLXwBmj8qh4AMAJTd7LRNLy0I=' 'sha256-KKiIWBiZjXFjBNeLy+D89TaPWo9W1zSYBeneCJvz4uc='">
+		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org; font-src 'self' blob: data:; img-src 'self' data: https://*.openstreetmap.org; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org 'sha256-LIbrr/7ND7qIWcw6IJ6yWpee5XkoNX0mXBm7k5vluz4=' 'sha256-KKiIWBiZjXFjBNeLy+D89TaPWo9W1zSYBeneCJvz4uc='">
 	<link href="/journal/internal/immutable/assets/__layout-708843c4.css" rel="stylesheet">
+	<link href="/journal/internal/immutable/assets/map-3c20a24b.css" rel="stylesheet">
+	<link href="/journal/internal/immutable/assets/remoteStorageState-2757c040.css" rel="stylesheet">
 	<link href="/journal/internal/immutable/assets/Layout-6bf551a2.css" rel="stylesheet">
 	<link rel="modulepreload" href="/journal/internal/immutable/start-40be98b6.js">
 	<link rel="modulepreload" href="/journal/internal/immutable/chunks/index-8e1ea7fc.js">
 	<link rel="modulepreload" href="/journal/internal/immutable/chunks/preload-helper-b6d3926a.js">
 	<link rel="modulepreload" href="/journal/internal/immutable/pages/__layout.svelte-5da5a1bb.js">
-	<link rel="modulepreload" href="/journal/internal/immutable/pages/privacy-policy.svelte-36974286.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/pages/map.svelte-1c0670d3.js">
+	<link rel="modulepreload" href="/journal/internal/immutable/chunks/remoteStorageState-0b024036.js">
 	<link rel="modulepreload" href="/journal/internal/immutable/chunks/Layout-6f72e75c.js">
 			<script>
 		if ('serviceWorker' in navigator) {
@@ -31,12 +34,7 @@
 
 
 
-<div class="relative flex w-full h-full"><div class="flex flex-col w-full h-full"><div class="flex flex-col flex-grow overflow-hidden"><div class="container mx-auto p-4 mt-4 mb-8"><h1 class="text-2xl">Privacy Policy</h1>
-		<hr>
-		<p>Simple privacy policy, your data is your data. We don&#39;t use it, we don&#39;t share it, and we
-			don&#39;t sell it.
-		</p>
-		<div class="text-center mt-4"><a role="button" class="underline" href="/journal/">Journal</a></div></div></div></div></div>
+<div class="relative flex w-full h-full"><div class="flex flex-col w-full h-full"><div class="flex flex-col flex-grow overflow-hidden"><h3 class="text-center py-8 text-lg">Please connect to a Storage Provider</h3></div></div></div>
 
 
 
@@ -66,13 +64,13 @@
 <div class="as-fixed as-top-0 as-left-0 z-20 as-w-full"><div class="as-container as-mx-auto"></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="sn5dgw">
+		<script type="module" data-sveltekit-hydrate="wyhhdw">
 		import { set_public_env, start } from "/journal/internal/immutable/start-40be98b6.js";
 
 		set_public_env({});
 
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="sn5dgw"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="wyhhdw"]').parentNode,
 			paths: {"base":"/journal","assets":"/journal"},
 			session: {},
 			route: true,
@@ -81,9 +79,9 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 5],
+				nodes: [0, 4],
 				params: {},
-				routeId: "privacy-policy"
+				routeId: "map"
 			}
 		});
 	</script>

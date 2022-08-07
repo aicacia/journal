@@ -1,7 +1,10 @@
 const j = [
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
-  "/journal/internal/immutable/assets/KaTeX_Fraktur-Regular-51814d27.woff2",
   "/journal/internal/immutable/assets/KaTeX_Caligraphic-Bold-de7701e4.woff2",
+  "/journal/internal/immutable/assets/KaTeX_Caligraphic-Regular-5d53e70a.woff2",
+  "/journal/internal/immutable/assets/KaTeX_Fraktur-Bold-74444efd.woff2",
+  "/journal/internal/immutable/assets/KaTeX_Fraktur-Regular-51814d27.woff2",
+  "/journal/internal/immutable/assets/KaTeX_Main-Bold-0f60d1b8.woff2",
   "/journal/internal/immutable/assets/KaTeX_Main-BoldItalic-99cd42a3.woff2",
   "/journal/internal/immutable/assets/KaTeX_Main-Italic-97479ca6.woff2",
   "/journal/internal/immutable/assets/KaTeX_Main-Regular-c2342cd8.woff2",
@@ -15,12 +18,12 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size2-Regular-d04c5421.woff2",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-a4af7d41.woff2",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-71d517d6.woff2",
-  "/journal/internal/immutable/assets/KaTeX_Fraktur-Bold-74444efd.woff2",
-  "/journal/internal/immutable/assets/KaTeX_Caligraphic-Regular-5d53e70a.woff2",
-  "/journal/internal/immutable/assets/KaTeX_Main-Bold-0f60d1b8.woff2",
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-30da91e8.woff",
-  "/journal/internal/immutable/assets/KaTeX_Fraktur-Regular-5e28753b.woff",
   "/journal/internal/immutable/assets/KaTeX_Caligraphic-Bold-1ae6bd74.woff",
+  "/journal/internal/immutable/assets/KaTeX_Caligraphic-Regular-3398dd02.woff",
+  "/journal/internal/immutable/assets/KaTeX_Fraktur-Bold-9be7ceb8.woff",
+  "/journal/internal/immutable/assets/KaTeX_Fraktur-Regular-5e28753b.woff",
+  "/journal/internal/immutable/assets/KaTeX_Main-Bold-c76c5d69.woff",
   "/journal/internal/immutable/assets/KaTeX_Main-BoldItalic-a6f7ec0d.woff",
   "/journal/internal/immutable/assets/KaTeX_Main-Italic-f1d6ef86.woff",
   "/journal/internal/immutable/assets/KaTeX_Main-Regular-c6368d87.woff",
@@ -35,12 +38,12 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-6ab6b62e.woff",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-99f9c675.woff",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-e14fed02.woff",
-  "/journal/internal/immutable/assets/KaTeX_Fraktur-Bold-9be7ceb8.woff",
-  "/journal/internal/immutable/assets/KaTeX_Caligraphic-Regular-3398dd02.woff",
-  "/journal/internal/immutable/assets/KaTeX_Main-Bold-c76c5d69.woff",
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-68534840.ttf",
-  "/journal/internal/immutable/assets/KaTeX_Fraktur-Regular-1e6f9579.ttf",
   "/journal/internal/immutable/assets/KaTeX_Caligraphic-Bold-07d8e303.ttf",
+  "/journal/internal/immutable/assets/KaTeX_Caligraphic-Regular-ed0b7437.ttf",
+  "/journal/internal/immutable/assets/KaTeX_Fraktur-Bold-9163df9c.ttf",
+  "/journal/internal/immutable/assets/KaTeX_Fraktur-Regular-1e6f9579.ttf",
+  "/journal/internal/immutable/assets/KaTeX_Main-Bold-138ac28d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Main-BoldItalic-70ee1f64.ttf",
   "/journal/internal/immutable/assets/KaTeX_Main-Italic-0d85ae7c.ttf",
   "/journal/internal/immutable/assets/KaTeX_Main-Regular-d0332f52.ttf",
@@ -55,22 +58,22 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-500e04d5.ttf",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-c647367d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/assets/KaTeX_Fraktur-Bold-9163df9c.ttf",
-  "/journal/internal/immutable/assets/KaTeX_Caligraphic-Regular-ed0b7437.ttf",
-  "/journal/internal/immutable/assets/KaTeX_Main-Bold-138ac28d.ttf",
-  "/journal/internal/immutable/start-b35b5584.js",
-  "/journal/internal/immutable/pages/__layout.svelte-d78f2472.js",
-  "/journal/internal/immutable/assets/__layout-b618bc12.css",
-  "/journal/internal/immutable/error.svelte-ee9ecbc9.js",
-  "/journal/internal/immutable/pages/index.svelte-ba56cfb1.js",
-  "/journal/internal/immutable/assets/index-2757c040.css",
-  "/journal/internal/immutable/pages/privacy-policy.svelte-ec956cda.js",
-  "/journal/internal/immutable/pages/terms-of-service.svelte-19b4085d.js",
-  "/journal/internal/immutable/chunks/index-83f3453a.js",
-  "/journal/internal/immutable/chunks/paths-ec81bac6.js",
-  "/journal/internal/immutable/chunks/preload-helper-3fd8ba3d.js",
-  "/journal/internal/immutable/chunks/Layout-0030ab91.js",
+  "/journal/internal/immutable/start-40be98b6.js",
+  "/journal/internal/immutable/pages/__layout.svelte-5da5a1bb.js",
+  "/journal/internal/immutable/assets/__layout-708843c4.css",
+  "/journal/internal/immutable/error.svelte-a8b24a76.js",
+  "/journal/internal/immutable/pages/book.svelte-a53d7c68.js",
+  "/journal/internal/immutable/pages/index.svelte-dfe2565d.js",
+  "/journal/internal/immutable/pages/map.svelte-1c0670d3.js",
+  "/journal/internal/immutable/assets/map-3c20a24b.css",
+  "/journal/internal/immutable/pages/privacy-policy.svelte-36974286.js",
+  "/journal/internal/immutable/pages/terms-of-service.svelte-32c877f5.js",
+  "/journal/internal/immutable/chunks/index-8e1ea7fc.js",
+  "/journal/internal/immutable/chunks/preload-helper-b6d3926a.js",
+  "/journal/internal/immutable/chunks/Layout-6f72e75c.js",
   "/journal/internal/immutable/assets/Layout-6bf551a2.css",
+  "/journal/internal/immutable/chunks/remoteStorageState-0b024036.js",
+  "/journal/internal/immutable/assets/remoteStorageState-2757c040.css",
   "/journal/internal/immutable/chunks/widget-e39ea803.js",
   "/journal/internal/immutable/chunks/prism-abap.min-ffba0124.js",
   "/journal/internal/immutable/chunks/prism-abnf.min-948991ed.js",
@@ -361,25 +364,30 @@ const j = [
   "/journal/internal/immutable/chunks/prism-xojo.min-c83ad168.js",
   "/journal/internal/immutable/chunks/prism-xquery.min-933a0a41.js",
   "/journal/internal/immutable/chunks/prism-yang.min-38c046cf.js",
-  "/journal/internal/immutable/chunks/prism-zig.min-9bffd6db.js"
+  "/journal/internal/immutable/chunks/prism-zig.min-9bffd6db.js",
+  "/journal/internal/immutable/chunks/leaflet-src-eb3fcef6.js"
 ], c = [
   "/journal/favicon.png",
   "/journal/icon.png",
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1658696975615", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
+], s = "1659888789058", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
 m.addEventListener("install", (n) => {
-  n.waitUntil(caches.open(r).then((a) => a.addAll(u)).then(() => {
-    m.skipWaiting();
-  }));
+  n.waitUntil(
+    caches.open(r).then((a) => a.addAll(u)).then(() => {
+      m.skipWaiting();
+    })
+  );
 });
 m.addEventListener("activate", (n) => {
-  n.waitUntil(caches.keys().then(async (a) => {
-    for (const i of a)
-      i !== r && await caches.delete(i);
-    m.clients.claim();
-  }));
+  n.waitUntil(
+    caches.keys().then(async (a) => {
+      for (const i of a)
+        i !== r && await caches.delete(i);
+      m.clients.claim();
+    })
+  );
 });
 async function b(n) {
   const a = await caches.open(`offline${s}`);
@@ -397,5 +405,7 @@ m.addEventListener("fetch", (n) => {
   if (n.request.method !== "GET" || n.request.headers.has("range"))
     return;
   const a = new URL(n.request.url), i = a.protocol.startsWith("http"), e = a.hostname === self.location.hostname && a.port !== self.location.port, l = a.host === self.location.host && o.has(a.pathname), t = n.request.cache === "only-if-cached" && !l;
-  i && !e && !t && n.respondWith((async () => l && await caches.match(n.request) || b(n.request))());
+  i && !e && !t && n.respondWith(
+    (async () => l && await caches.match(n.request) || b(n.request))()
+  );
 });
