@@ -236,136 +236,51 @@
     "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "internal/immutable/start-414b505d.js",
+    "file": "internal/immutable/start-d9799c47.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-8e1ea7fc.js",
-      "_preload-helper-b6d3926a.js"
+      "_index-ae548d5b.js",
+      "_preload-helper-4d4452b3.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
-      "src/routes/book.svelte",
       "src/routes/index.svelte",
-      "src/routes/map.svelte",
       "src/routes/privacy-policy.svelte",
       "src/routes/terms-of-service.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "internal/immutable/pages/__layout.svelte-5da5a1bb.js",
+    "file": "internal/immutable/pages/__layout.svelte-db2741cc.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-8e1ea7fc.js"
+      "_index-ae548d5b.js"
     ],
     "css": [
       "internal/immutable/assets/__layout-708843c4.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "internal/immutable/error.svelte-a8b24a76.js",
+    "file": "internal/immutable/error.svelte-48e3478b.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-8e1ea7fc.js"
-    ]
-  },
-  "src/routes/book.svelte": {
-    "file": "internal/immutable/pages/book.svelte-79ab2594.js",
-    "src": "src/routes/book.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-8e1ea7fc.js",
-      "_remoteStorageState-59ce5716.js",
-      "_Layout-6f72e75c.js",
-      "_preload-helper-b6d3926a.js"
+      "_index-ae548d5b.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "internal/immutable/pages/index.svelte-cce6a628.js",
+    "file": "internal/immutable/pages/index.svelte-5e4b18b2.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-8e1ea7fc.js",
-      "_Layout-6f72e75c.js",
-      "_remoteStorageState-59ce5716.js",
-      "_preload-helper-b6d3926a.js"
-    ]
-  },
-  "src/routes/map.svelte": {
-    "file": "internal/immutable/pages/map.svelte-30533e8a.js",
-    "src": "src/routes/map.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-8e1ea7fc.js",
-      "_remoteStorageState-59ce5716.js",
-      "_preload-helper-b6d3926a.js",
-      "_Layout-6f72e75c.js"
-    ],
-    "dynamicImports": [
-      "_leaflet-src-eb3fcef6.js"
-    ],
-    "css": [
-      "internal/immutable/assets/map-3c20a24b.css"
-    ]
-  },
-  "src/routes/privacy-policy.svelte": {
-    "file": "internal/immutable/pages/privacy-policy.svelte-36974286.js",
-    "src": "src/routes/privacy-policy.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-8e1ea7fc.js",
-      "_preload-helper-b6d3926a.js",
-      "_Layout-6f72e75c.js"
-    ]
-  },
-  "src/routes/terms-of-service.svelte": {
-    "file": "internal/immutable/pages/terms-of-service.svelte-32c877f5.js",
-    "src": "src/routes/terms-of-service.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-8e1ea7fc.js",
-      "_preload-helper-b6d3926a.js",
-      "_Layout-6f72e75c.js"
-    ]
-  },
-  "_index-8e1ea7fc.js": {
-    "file": "internal/immutable/chunks/index-8e1ea7fc.js"
-  },
-  "_preload-helper-b6d3926a.js": {
-    "file": "internal/immutable/chunks/preload-helper-b6d3926a.js",
-    "imports": [
-      "_index-8e1ea7fc.js"
-    ]
-  },
-  "_Layout-6f72e75c.js": {
-    "file": "internal/immutable/chunks/Layout-6f72e75c.js",
-    "imports": [
-      "_index-8e1ea7fc.js",
-      "_preload-helper-b6d3926a.js"
-    ],
-    "dynamicImports": [
-      "_widget-e39ea803.js"
-    ],
-    "css": [
-      "internal/immutable/assets/Layout-6bf551a2.css"
-    ]
-  },
-  "_remoteStorageState-59ce5716.js": {
-    "file": "internal/immutable/chunks/remoteStorageState-59ce5716.js",
-    "imports": [
-      "_index-8e1ea7fc.js",
-      "_Layout-6f72e75c.js",
-      "_preload-helper-b6d3926a.js"
+      "_index-ae548d5b.js",
+      "_preload-helper-4d4452b3.js",
+      "_Layout-cb33fa43.js"
     ],
     "dynamicImports": [
       "node_modules/prismjs/components/prism-abap.min.js",
@@ -657,10 +572,11 @@
       "node_modules/prismjs/components/prism-xojo.min.js",
       "node_modules/prismjs/components/prism-xquery.min.js",
       "node_modules/prismjs/components/prism-yang.min.js",
-      "node_modules/prismjs/components/prism-zig.min.js"
+      "node_modules/prismjs/components/prism-zig.min.js",
+      "_leaflet-src-025414ff.js"
     ],
     "css": [
-      "internal/immutable/assets/remoteStorageState-2757c040.css"
+      "internal/immutable/assets/index-630add3d.css"
     ],
     "assets": [
       "internal/immutable/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
@@ -722,6 +638,57 @@
       "internal/immutable/assets/KaTeX_Typewriter-Regular-71d517d6.woff2",
       "internal/immutable/assets/KaTeX_Typewriter-Regular-e14fed02.woff",
       "internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf"
+    ]
+  },
+  "src/routes/privacy-policy.svelte": {
+    "file": "internal/immutable/pages/privacy-policy.svelte-deb98182.js",
+    "src": "src/routes/privacy-policy.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-ae548d5b.js",
+      "_preload-helper-4d4452b3.js",
+      "_Layout-cb33fa43.js"
+    ]
+  },
+  "src/routes/terms-of-service.svelte": {
+    "file": "internal/immutable/pages/terms-of-service.svelte-996a3e07.js",
+    "src": "src/routes/terms-of-service.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-ae548d5b.js",
+      "_preload-helper-4d4452b3.js",
+      "_Layout-cb33fa43.js"
+    ]
+  },
+  "_index-ae548d5b.js": {
+    "file": "internal/immutable/chunks/index-ae548d5b.js"
+  },
+  "_preload-helper-4d4452b3.js": {
+    "file": "internal/immutable/chunks/preload-helper-4d4452b3.js",
+    "imports": [
+      "_index-ae548d5b.js"
+    ]
+  },
+  "_Layout-cb33fa43.js": {
+    "file": "internal/immutable/chunks/Layout-cb33fa43.js",
+    "imports": [
+      "_index-ae548d5b.js",
+      "_preload-helper-4d4452b3.js"
+    ],
+    "dynamicImports": [
+      "_widget-e39ea803.js"
+    ],
+    "css": [
+      "internal/immutable/assets/Layout-6bf551a2.css"
+    ]
+  },
+  "_leaflet-src-025414ff.js": {
+    "file": "internal/immutable/chunks/leaflet-src-025414ff.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Layout-cb33fa43.js"
     ]
   },
   "_widget-e39ea803.js": {
@@ -2178,13 +2145,6 @@
     "src": "node_modules/prismjs/components/prism-zig.min.js",
     "isDynamicEntry": true
   },
-  "_leaflet-src-eb3fcef6.js": {
-    "file": "internal/immutable/chunks/leaflet-src-eb3fcef6.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "_Layout-6f72e75c.js"
-    ]
-  },
   "Layout.css": {
     "file": "internal/immutable/assets/Layout-6bf551a2.css",
     "src": "Layout.css"
@@ -2193,12 +2153,8 @@
     "file": "internal/immutable/assets/__layout-708843c4.css",
     "src": "src/routes/__layout.css"
   },
-  "src/routes/map.css": {
-    "file": "internal/immutable/assets/map-3c20a24b.css",
-    "src": "src/routes/map.css"
-  },
-  "remoteStorageState.css": {
-    "file": "internal/immutable/assets/remoteStorageState-2757c040.css",
-    "src": "remoteStorageState.css"
+  "src/routes/index.css": {
+    "file": "internal/immutable/assets/index-630add3d.css",
+    "src": "src/routes/index.css"
   }
 }

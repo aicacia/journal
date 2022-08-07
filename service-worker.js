@@ -58,22 +58,19 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-500e04d5.ttf",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-c647367d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/start-414b505d.js",
-  "/journal/internal/immutable/pages/__layout.svelte-5da5a1bb.js",
+  "/journal/internal/immutable/start-d9799c47.js",
+  "/journal/internal/immutable/pages/__layout.svelte-db2741cc.js",
   "/journal/internal/immutable/assets/__layout-708843c4.css",
-  "/journal/internal/immutable/error.svelte-a8b24a76.js",
-  "/journal/internal/immutable/pages/book.svelte-79ab2594.js",
-  "/journal/internal/immutable/pages/index.svelte-cce6a628.js",
-  "/journal/internal/immutable/pages/map.svelte-30533e8a.js",
-  "/journal/internal/immutable/assets/map-3c20a24b.css",
-  "/journal/internal/immutable/pages/privacy-policy.svelte-36974286.js",
-  "/journal/internal/immutable/pages/terms-of-service.svelte-32c877f5.js",
-  "/journal/internal/immutable/chunks/index-8e1ea7fc.js",
-  "/journal/internal/immutable/chunks/preload-helper-b6d3926a.js",
-  "/journal/internal/immutable/chunks/Layout-6f72e75c.js",
+  "/journal/internal/immutable/error.svelte-48e3478b.js",
+  "/journal/internal/immutable/pages/index.svelte-5e4b18b2.js",
+  "/journal/internal/immutable/assets/index-630add3d.css",
+  "/journal/internal/immutable/pages/privacy-policy.svelte-deb98182.js",
+  "/journal/internal/immutable/pages/terms-of-service.svelte-996a3e07.js",
+  "/journal/internal/immutable/chunks/index-ae548d5b.js",
+  "/journal/internal/immutable/chunks/preload-helper-4d4452b3.js",
+  "/journal/internal/immutable/chunks/Layout-cb33fa43.js",
   "/journal/internal/immutable/assets/Layout-6bf551a2.css",
-  "/journal/internal/immutable/chunks/remoteStorageState-59ce5716.js",
-  "/journal/internal/immutable/assets/remoteStorageState-2757c040.css",
+  "/journal/internal/immutable/chunks/leaflet-src-025414ff.js",
   "/journal/internal/immutable/chunks/widget-e39ea803.js",
   "/journal/internal/immutable/chunks/prism-abap.min-ffba0124.js",
   "/journal/internal/immutable/chunks/prism-abnf.min-948991ed.js",
@@ -364,15 +361,14 @@ const j = [
   "/journal/internal/immutable/chunks/prism-xojo.min-c83ad168.js",
   "/journal/internal/immutable/chunks/prism-xquery.min-933a0a41.js",
   "/journal/internal/immutable/chunks/prism-yang.min-38c046cf.js",
-  "/journal/internal/immutable/chunks/prism-zig.min-9bffd6db.js",
-  "/journal/internal/immutable/chunks/leaflet-src-eb3fcef6.js"
+  "/journal/internal/immutable/chunks/prism-zig.min-9bffd6db.js"
 ], c = [
   "/journal/favicon.png",
   "/journal/icon.png",
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1659889473563", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
+], s = "1659906991400", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
 m.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((a) => a.addAll(u)).then(() => {
