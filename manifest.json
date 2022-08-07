@@ -236,7 +236,7 @@
     "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "internal/immutable/start-d9799c47.js",
+    "file": "internal/immutable/start-2cae4b0e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -260,7 +260,7 @@
       "_index-ae548d5b.js"
     ],
     "css": [
-      "internal/immutable/assets/__layout-708843c4.css"
+      "internal/immutable/assets/__layout-bd9812dc.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -273,7 +273,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "internal/immutable/pages/index.svelte-5e4b18b2.js",
+    "file": "internal/immutable/pages/index.svelte-2c29db60.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -2145,13 +2145,13 @@
     "src": "node_modules/prismjs/components/prism-zig.min.js",
     "isDynamicEntry": true
   },
+  "src/routes/__layout.css": {
+    "file": "internal/immutable/assets/__layout-bd9812dc.css",
+    "src": "src/routes/__layout.css"
+  },
   "Layout.css": {
     "file": "internal/immutable/assets/Layout-6bf551a2.css",
     "src": "Layout.css"
-  },
-  "src/routes/__layout.css": {
-    "file": "internal/immutable/assets/__layout-708843c4.css",
-    "src": "src/routes/__layout.css"
   },
   "src/routes/index.css": {
     "file": "internal/immutable/assets/index-630add3d.css",
