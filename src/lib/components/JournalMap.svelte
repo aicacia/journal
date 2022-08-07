@@ -15,6 +15,11 @@
 	let latitude: number = 39;
 	let longitude: number = -98;
 
+	function onSelect(journalEntry: IJournalEntry) {
+		selectedJournalEntry = journalEntry;
+		updateOpen = true;
+	}
+
 	$: entries = Object.values(
 		$journalByMonth[$currentDate.toISOString().substring(0, 7)] || {}
 	).flat(1);
@@ -36,7 +41,7 @@
 	<div class="absolute top-0 left-0 w-full z-[1000]">
 		<Controls />
 	</div>
-	<Map bind:latitude bind:longitude {entries} />
+	<Map bind:latitude bind:longitude {entries} {onSelect} />
 </div>
 
 <UpdateEntry bind:open={updateOpen} journalEntry={selectedJournalEntry} />

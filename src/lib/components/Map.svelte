@@ -5,7 +5,7 @@
 </script>
 
 <script lang="ts">
-	import type { Map, Icon } from 'leaflet';
+	import type { Map, Icon, marker, tileLayer, Marker } from 'leaflet';
 	import { onMount } from 'svelte';
 	import type { IJournalEntry } from '$lib/state/journal';
 	import { base } from '$app/paths';
@@ -16,8 +16,9 @@
 	export let zoom: number = 13;
 	export let map: Map | undefined = undefined;
 	export let entries: IJournalEntry[] = [];
+	export let onSelect: (journalEntry: IJournalEntry) => void;
 
-	let Leaflet: any;
+	let Leaflet: { marker: typeof marker; tileLayer: typeof tileLayer; map: any; icon: any };
 	let journalIcon: Icon;
 	let element: HTMLElement;
 
@@ -28,7 +29,7 @@
 	}
 
 	onMount(async () => {
-		Leaflet = await import('leaflet');
+		Leaflet = (await import('leaflet')) as any;
 
 		const m: Map = (map = Leaflet.map(element, { zoomControl: false }).setView(
 			[latitude, longitude],
@@ -54,16 +55,22 @@
 		});
 	});
 
+	let lastMarkers: Marker[] = [];
 	$: if (journalIcon && map) {
-		entries.forEach((entry) => {
-			if (entry.geolocation) {
-				Leaflet.marker([entry.geolocation.latitude, entry.geolocation.longitude], {
-					icon: journalIcon
-				})
-					.addTo(map)
-					.bindPopup(entry.createdAt.toLocaleDateString());
-			}
-		});
+		lastMarkers.forEach((marker) => map?.removeLayer(marker));
+		const newMarkers = entries
+			.map((entry) => {
+				if (entry.geolocation) {
+					return Leaflet.marker([entry.geolocation.latitude, entry.geolocation.longitude], {
+						icon: journalIcon
+					})
+						.addTo(map as Map)
+						.bindPopup(entry.createdAt.toLocaleDateString())
+						.addEventListener('click', () => onSelect(entry));
+				}
+			})
+			.filter((marker) => !!marker);
+		lastMarkers = newMarkers as Marker[];
 	}
 </script>
 
