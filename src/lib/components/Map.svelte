@@ -8,6 +8,7 @@
 	import type { Map, Icon } from 'leaflet';
 	import { onMount } from 'svelte';
 	import type { IJournalEntry } from '$lib/state/journal';
+	import { base } from '$app/paths';
 
 	export let latitude: number = 39;
 	export let longitude: number = -98;
@@ -46,7 +47,7 @@
 		});
 
 		journalIcon = Leaflet.icon({
-			iconUrl: '/icon.png',
+			iconUrl: `${base}/icon.png`,
 			iconSize: [48, 48],
 			iconAnchor: [24, 24],
 			popupAnchor: [0, 0]
