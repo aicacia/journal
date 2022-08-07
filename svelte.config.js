@@ -23,8 +23,9 @@ const config = {
 					'https://api.dropboxapi.com',
 					'https://content.dropboxapi.com',
 					'https://www.googleapis.com',
-					'https://nominatim.openstreetmap.org'
+					'https://*.openstreetmap.org'
 				],
+				'img-src': ['self', 'data:', 'https://*.openstreetmap.org'],
 				'font-src': ['self', 'blob:', 'data:'],
 				'style-src': ['self', 'unsafe-inline']
 			}

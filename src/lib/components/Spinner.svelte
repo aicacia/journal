@@ -1,4 +1,4 @@
-<div class="inline w-8 h-8">
+<div class="w-8 h-8">
 	<svg
 		class="animate-spin text-black"
 		xmlns="http://www.w3.org/2000/svg"

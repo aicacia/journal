@@ -20,16 +20,25 @@
 		open = false;
 		onClose();
 	}
+
+	function onClickOutside() {
+		open = false;
+		onClose();
+	}
 </script>
 
 <Portal>
-	<div class="relative z-10" role="dialog" aria-modal="true">
+	<div class="relative z-[10000]" role="dialog" aria-modal="true">
 		<div class="fixed inset-0 bg-gray-500 bg-opacity-25" class:hidden={!open} />
-		<div class="fixed z-10 inset-0 overflow-y-auto" class:hidden={!open}>
-			<div class="flex justify-center content-center text-center h-full p-4 sm:p-0">
+		<div class="fixed z-[10000] inset-0 overflow-y-auto" class:hidden={!open}>
+			<div
+				class="flex justify-center content-center text-center h-full p-4 sm:p-0"
+				on:click={onClickOutside}
+			>
 				<div
 					class="flex flex-col relative bg-white text-left overflow-hidden shadow-xl sm:container"
 					class:m-auto={small}
+					on:click|stopPropagation
 				>
 					<div class="flex flex-row flex-shrink items-start justify-between px-4 pt-4">
 						<div class="flex-grow">

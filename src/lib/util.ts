@@ -1,5 +1,6 @@
 import { hashOf } from '@aicacia/hash';
 import { XorShiftRng } from '@aicacia/rand';
+import type { IJournalEntry } from './state/journal';
 
 export function createInsecureID() {
 	return Math.random().toString(36).substring(2);
@@ -11,6 +12,10 @@ export function getYearMonth(date: Date) {
 
 export function getDaysInMonth(date: Date) {
 	return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+}
+
+export function getDateSortName(locale: string, date: Date) {
+	return date.toLocaleDateString(locale, { month: 'short', weekday: 'short', day: 'numeric' });
 }
 
 export function getMonthSortName(locale: string, date: Date) {
@@ -62,4 +67,8 @@ export async function getLocationName(coords: GeolocationCoordinates): Promise<s
 	}
 	const result = await res.json();
 	return result.display_name;
+}
+
+export function sortByDate(a: IJournalEntry, b: IJournalEntry) {
+	return b.createdAt.getMilliseconds() - a.createdAt.getMilliseconds();
 }

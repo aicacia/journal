@@ -10,8 +10,8 @@
 		<div class="flex flex-col flex-grow overflow-hidden">
 			<slot />
 		</div>
-		<Footer />
 	</div>
 </div>
 
+<Footer />
 <Notifications />

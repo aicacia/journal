@@ -3,8 +3,6 @@ import { writable } from 'svelte/store';
 import type { IAsJSON } from '@aicacia/json';
 import { v4 } from 'uuid';
 import { remoteStorage } from '../remoteStorage';
-import { currentDate } from './currentDate';
-import { browser } from '$app/env';
 import { getYearMonth } from '$lib/util';
 
 remoteStorage.access.claim('journal', 'rw');
@@ -199,6 +197,51 @@ export async function deleteJournalEntry(id: string) {
 	}
 }
 
+export async function showByMonth(date: Date) {
+	if (!remoteStorage.connected) {
+		function onConnected() {
+			remoteStorage.removeEventListener('connected', onConnected);
+			showByMonth(date);
+		}
+		remoteStorage.addEventListener('connected', onConnected);
+	} else {
+		const month = getYearMonth(date);
+		const byMonth = (get(journalByMonth) || {})[month] || {};
+
+		if (!get(writableMonthsLoading).has(month) && !Object.keys(byMonth).length) {
+			writableMonthsLoading.update((state) => {
+				state.add(month);
+				return state;
+			});
+			async function onSyncDone() {
+				remoteStorage.removeEventListener('sync-done', onSyncDone);
+				try {
+					const journal = (await journalRS.getAll(`${month}/`, false)) as IJournalJSON;
+					writableJournal.update((state) => {
+						const newState = { ...state };
+						Object.values(journal).forEach((journalEntry) => {
+							const prevJournalEntry = newState[journalEntry.id],
+								newJournalEntry = journalEntryFromJSON(journalEntry);
+
+							if (!prevJournalEntry || prevJournalEntry.updatedAt < newJournalEntry.updatedAt) {
+								newState[journalEntry.id] = newJournalEntry;
+							}
+						});
+						return newState;
+					});
+				} finally {
+					writableMonthsLoading.update((state) => {
+						state.delete(month);
+						return state;
+					});
+				}
+			}
+			remoteStorage.addEventListener('sync-done', onSyncDone);
+			remoteStorage.caching.set(`/journal/${month}/`, 'ALL');
+		}
+	}
+}
+
 async function rsStoreJournalEntry(journalEntry: IJournalEntry) {
 	const month = journalEntry.createdAt.toISOString().substring(0, 7);
 	await journalRS.storeObject(
@@ -211,71 +254,4 @@ async function rsStoreJournalEntry(journalEntry: IJournalEntry) {
 async function rsDeleteJournalEntry(journalEntry: IJournalEntry) {
 	const month = getYearMonth(journalEntry.createdAt);
 	await journalRS.remove(`${month}/${journalEntry.id}.json`);
-}
-
-async function onSync(date: Date) {
-	if (remoteStorage.connected) {
-		const month = getYearMonth(date);
-		const byMonth = (get(journalByMonth) || {})[month] || {};
-
-		if (!get(writableMonthsLoading).has(month) && !Object.keys(byMonth).length) {
-			let journal: IJournalJSON = {};
-
-			try {
-				writableMonthsLoading.update((state) => {
-					state.add(month);
-					return state;
-				});
-				journal = (await journalRS.getAll(`${month}/`, false)) as IJournalJSON;
-			} finally {
-				writableMonthsLoading.update((state) => {
-					state.delete(month);
-					return state;
-				});
-			}
-
-			writableJournal.update((state) => {
-				const newState = { ...state };
-				Object.values(journal).forEach((journalEntry) => {
-					const prevJournalEntry = newState[journalEntry.id],
-						newJournalEntry = journalEntryFromJSON(journalEntry);
-
-					if (!prevJournalEntry || prevJournalEntry.updatedAt < newJournalEntry.updatedAt) {
-						newState[journalEntry.id] = newJournalEntry;
-					}
-				});
-				return newState;
-			});
-		}
-	}
-}
-
-async function onDateChange(date: Date) {
-	if (remoteStorage.connected) {
-		const month = getYearMonth(date);
-		const byMonth = (get(journalByMonth) || {})[month] || {};
-
-		if (!get(writableMonthsLoading).has(month) && !Object.keys(byMonth).length) {
-			writableMonthsLoading.update((state) => {
-				state.add(month);
-				return state;
-			});
-			function onSyncDone() {
-				remoteStorage.removeEventListener('sync-done', onSyncDone);
-				writableMonthsLoading.update((state) => {
-					state.delete(month);
-					return state;
-				});
-				onSync(date);
-			}
-			remoteStorage.addEventListener('sync-done', onSyncDone);
-			remoteStorage.caching.set(`/journal/${month}/`, 'ALL');
-		}
-	}
-}
-
-remoteStorage.addEventListener('connected', () => onDateChange(get(currentDate)));
-
-if (browser) {
-	derived(currentDate, onDateChange).subscribe(() => {});
 }

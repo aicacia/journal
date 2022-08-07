@@ -4,21 +4,22 @@
 	import Calender from './Calender/Month.svelte';
 	import { currentDate } from '$lib/state/currentDate';
 	import Controls from './Controls.svelte';
-	import type { IJournalEntry } from '$lib/state/journal';
+	import { showByMonth, type IJournalEntry } from '$lib/state/journal';
 	import UpdateEntry from './UpdateEntry.svelte';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/env';
 
 	let today = new Date();
-	let selecteJournalEntry: IJournalEntry | undefined;
+	let selectedJournalEntry: IJournalEntry | undefined;
 	let updateOpen = false;
-
 	let innerWidth = 1024;
 
 	function onSelect(journalEntry: IJournalEntry) {
-		selecteJournalEntry = journalEntry;
+		selectedJournalEntry = journalEntry;
 		updateOpen = true;
 	}
+
+	$: showByMonth($currentDate);
 
 	onMount(() => {
 		if (browser) {
@@ -29,12 +30,14 @@
 
 <svelte:window bind:innerWidth />
 
-{#if innerWidth >= 640}
-	<Controls />
-{/if}
-<Calender date={$currentDate} {today} {onSelect} />
-{#if innerWidth < 640}
-	<Controls />
-{/if}
+<div class="flex flex-col flex-grow pb-[80px]">
+	{#if innerWidth >= 640}
+		<Controls />
+	{/if}
+	<Calender date={$currentDate} {today} {onSelect} />
+	{#if innerWidth < 640}
+		<Controls />
+	{/if}
+</div>
 
-<UpdateEntry bind:open={updateOpen} journalEntry={selecteJournalEntry} />
+<UpdateEntry bind:open={updateOpen} journalEntry={selectedJournalEntry} />
