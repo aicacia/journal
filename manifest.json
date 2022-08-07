@@ -236,7 +236,7 @@
     "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "internal/immutable/start-40be98b6.js",
+    "file": "internal/immutable/start-46491b97.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -275,37 +275,37 @@
     ]
   },
   "src/routes/book.svelte": {
-    "file": "internal/immutable/pages/book.svelte-a53d7c68.js",
+    "file": "internal/immutable/pages/book.svelte-79ab2594.js",
     "src": "src/routes/book.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-8e1ea7fc.js",
-      "_remoteStorageState-0b024036.js",
+      "_remoteStorageState-59ce5716.js",
       "_Layout-6f72e75c.js",
       "_preload-helper-b6d3926a.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "internal/immutable/pages/index.svelte-dfe2565d.js",
+    "file": "internal/immutable/pages/index.svelte-cce6a628.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-8e1ea7fc.js",
       "_Layout-6f72e75c.js",
-      "_remoteStorageState-0b024036.js",
+      "_remoteStorageState-59ce5716.js",
       "_preload-helper-b6d3926a.js"
     ]
   },
   "src/routes/map.svelte": {
-    "file": "internal/immutable/pages/map.svelte-1c0670d3.js",
+    "file": "internal/immutable/pages/map.svelte-9f73e63c.js",
     "src": "src/routes/map.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-8e1ea7fc.js",
-      "_remoteStorageState-0b024036.js",
+      "_remoteStorageState-59ce5716.js",
       "_preload-helper-b6d3926a.js",
       "_Layout-6f72e75c.js"
     ],
@@ -360,8 +360,8 @@
       "internal/immutable/assets/Layout-6bf551a2.css"
     ]
   },
-  "_remoteStorageState-0b024036.js": {
-    "file": "internal/immutable/chunks/remoteStorageState-0b024036.js",
+  "_remoteStorageState-59ce5716.js": {
+    "file": "internal/immutable/chunks/remoteStorageState-59ce5716.js",
     "imports": [
       "_index-8e1ea7fc.js",
       "_Layout-6f72e75c.js",
@@ -2185,20 +2185,20 @@
       "_Layout-6f72e75c.js"
     ]
   },
-  "Layout.css": {
-    "file": "internal/immutable/assets/Layout-6bf551a2.css",
-    "src": "Layout.css"
-  },
-  "src/routes/map.css": {
-    "file": "internal/immutable/assets/map-3c20a24b.css",
-    "src": "src/routes/map.css"
-  },
   "src/routes/__layout.css": {
     "file": "internal/immutable/assets/__layout-708843c4.css",
     "src": "src/routes/__layout.css"
   },
+  "Layout.css": {
+    "file": "internal/immutable/assets/Layout-6bf551a2.css",
+    "src": "Layout.css"
+  },
   "remoteStorageState.css": {
     "file": "internal/immutable/assets/remoteStorageState-2757c040.css",
     "src": "remoteStorageState.css"
+  },
+  "src/routes/map.css": {
+    "file": "internal/immutable/assets/map-3c20a24b.css",
+    "src": "src/routes/map.css"
   }
 }

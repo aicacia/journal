@@ -58,13 +58,13 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-500e04d5.ttf",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-c647367d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/start-40be98b6.js",
+  "/journal/internal/immutable/start-46491b97.js",
   "/journal/internal/immutable/pages/__layout.svelte-5da5a1bb.js",
   "/journal/internal/immutable/assets/__layout-708843c4.css",
   "/journal/internal/immutable/error.svelte-a8b24a76.js",
-  "/journal/internal/immutable/pages/book.svelte-a53d7c68.js",
-  "/journal/internal/immutable/pages/index.svelte-dfe2565d.js",
-  "/journal/internal/immutable/pages/map.svelte-1c0670d3.js",
+  "/journal/internal/immutable/pages/book.svelte-79ab2594.js",
+  "/journal/internal/immutable/pages/index.svelte-cce6a628.js",
+  "/journal/internal/immutable/pages/map.svelte-9f73e63c.js",
   "/journal/internal/immutable/assets/map-3c20a24b.css",
   "/journal/internal/immutable/pages/privacy-policy.svelte-36974286.js",
   "/journal/internal/immutable/pages/terms-of-service.svelte-32c877f5.js",
@@ -72,7 +72,7 @@ const j = [
   "/journal/internal/immutable/chunks/preload-helper-b6d3926a.js",
   "/journal/internal/immutable/chunks/Layout-6f72e75c.js",
   "/journal/internal/immutable/assets/Layout-6bf551a2.css",
-  "/journal/internal/immutable/chunks/remoteStorageState-0b024036.js",
+  "/journal/internal/immutable/chunks/remoteStorageState-59ce5716.js",
   "/journal/internal/immutable/assets/remoteStorageState-2757c040.css",
   "/journal/internal/immutable/chunks/widget-e39ea803.js",
   "/journal/internal/immutable/chunks/prism-abap.min-ffba0124.js",
@@ -372,7 +372,7 @@ const j = [
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1659888789058", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
+], s = "1659889293896", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
 m.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((a) => a.addAll(u)).then(() => {
