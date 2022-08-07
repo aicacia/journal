@@ -5,6 +5,7 @@
 	import FaBook from 'svelte-icons/fa/FaBook.svelte';
 	import FaRegCalendarAlt from 'svelte-icons/fa/FaRegCalendarAlt.svelte';
 	import PrevNext from './PrevNext.svelte';
+	import { activePage, setActivePage } from '$lib/state/activePage';
 	import { setCurrentDate } from '$lib/state/currentDate';
 	import CreateEntry from './CreateEntry.svelte';
 	import { tick } from 'svelte';
@@ -30,32 +31,32 @@
 	<div class="flex justify-center md:justify-start">
 		<button class="btn primary" on:click={onToday}>Today</button>
 		<Dropdown>
-			<a
-				class="p-2 flex hover:bg-gray-200"
-				class:bg-gray-200={$page.url.pathname === `${base}/`}
-				href={`${base}/`}
+			<button
+				class="p-2 w-full flex hover:bg-gray-200"
+				class:bg-gray-200={$activePage === 'calender'}
+				on:click={() => setActivePage('calender')}
 				role="menuitem"
 				tabindex="-1"
 				><span class="inline-block w-6 h-6"><FaRegCalendarAlt /></span>
-				<span class="inline-block ml-2">Calender</span></a
+				<span class="inline-block ml-2">Calender</span></button
 			>
-			<a
-				class="p-2 flex hover:bg-gray-200"
-				class:bg-gray-200={$page.url.pathname === `${base}/book`}
-				href={`${base}/book`}
+			<button
+				class="p-2 w-full  flex hover:bg-gray-200"
+				class:bg-gray-200={$activePage === 'book'}
+				on:click={() => setActivePage('book')}
 				role="menuitem"
 				tabindex="-1"
 				><span class="inline-block w-6 h-6"><FaBook /></span>
-				<span class="inline-block ml-2">Book</span></a
+				<span class="inline-block ml-2">Book</span></button
 			>
-			<a
-				class="p-2 flex hover:bg-gray-200"
-				class:bg-gray-200={$page.url.pathname === `${base}/map`}
-				href={`${base}/map`}
+			<button
+				class="p-2 w-full flex hover:bg-gray-200"
+				class:bg-gray-200={$activePage === 'map'}
+				on:click={() => setActivePage('map')}
 				role="menuitem"
 				tabindex="-1"
 				><span class="inline-block w-6 h-6"><MdMap /></span>
-				<span class="inline-block ml-2">Map</span></a
+				<span class="inline-block ml-2">Map</span></button
 			>
 		</Dropdown>
 	</div>

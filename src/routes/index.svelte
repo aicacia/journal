@@ -1,12 +1,12 @@
 <script lang="ts">
-	import JournalMonth from '$lib/components/JournalMonth.svelte';
+	import Journal from '$lib/components/Journal.svelte';
 	import Layout from '$lib/components/Layout.svelte';
 	import { remoteStorageState } from '$lib/state/remoteStorageState';
 </script>
 
 <Layout>
 	{#if $remoteStorageState.storage === 'connected'}
-		<JournalMonth />
+		<Journal />
 	{:else}
 		<h3 class="text-center py-8 text-lg">Please connect to a Storage Provider</h3>
 	{/if}
