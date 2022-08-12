@@ -58,19 +58,19 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-500e04d5.ttf",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-c647367d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/start-2cae4b0e.js",
+  "/journal/internal/immutable/start-f2aaaeae.js",
   "/journal/internal/immutable/pages/__layout.svelte-db2741cc.js",
-  "/journal/internal/immutable/assets/__layout-bd9812dc.css",
+  "/journal/internal/immutable/assets/__layout-9340541a.css",
   "/journal/internal/immutable/error.svelte-48e3478b.js",
-  "/journal/internal/immutable/pages/index.svelte-2c29db60.js",
+  "/journal/internal/immutable/pages/index.svelte-ac7bc7f5.js",
   "/journal/internal/immutable/assets/index-630add3d.css",
-  "/journal/internal/immutable/pages/privacy-policy.svelte-deb98182.js",
-  "/journal/internal/immutable/pages/terms-of-service.svelte-996a3e07.js",
+  "/journal/internal/immutable/pages/privacy-policy.svelte-2a4bb5d2.js",
+  "/journal/internal/immutable/pages/terms-of-service.svelte-0927cba3.js",
   "/journal/internal/immutable/chunks/index-ae548d5b.js",
   "/journal/internal/immutable/chunks/preload-helper-4d4452b3.js",
-  "/journal/internal/immutable/chunks/Layout-cb33fa43.js",
+  "/journal/internal/immutable/chunks/Layout-35f7b16b.js",
   "/journal/internal/immutable/assets/Layout-6bf551a2.css",
-  "/journal/internal/immutable/chunks/leaflet-src-025414ff.js",
+  "/journal/internal/immutable/chunks/leaflet-src-b44e72e5.js",
   "/journal/internal/immutable/chunks/widget-e39ea803.js",
   "/journal/internal/immutable/chunks/prism-abap.min-ffba0124.js",
   "/journal/internal/immutable/chunks/prism-abnf.min-948991ed.js",
@@ -368,7 +368,7 @@ const j = [
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1659907943973", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
+], s = "1660302781792", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
 m.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((a) => a.addAll(u)).then(() => {
