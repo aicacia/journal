@@ -18,7 +18,7 @@
 		</button>
 	</div>
 	<div
-		class="origin-top-left absolute left-0 mt-2 w-56 shadow bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+		class="origin-top-left absolute left-0 mt-2 w-56 shadow bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-[1001]"
 		role="menu"
 		class:scale-0={!open}
 		class:scale-100={open}

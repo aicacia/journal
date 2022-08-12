@@ -23,7 +23,7 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="flex flex-col flex-grow pb-[80px]">
+<div class="flex flex-col w-full h-full pb-[80px]">
 	{#if innerWidth >= 640}
 		<Controls months={false} />
 	{/if}

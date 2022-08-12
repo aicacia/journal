@@ -37,7 +37,7 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="flex flex-col flex-grow">
+<div class="flex flex-col w-full h-full">
 	<div class="absolute top-0 left-0 w-full z-[1000]">
 		<Controls />
 	</div>
