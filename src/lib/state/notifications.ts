@@ -19,9 +19,6 @@ const writableNotifications = writable<INotification[]>([]);
 
 export const notifications: Readable<INotification[]> = writableNotifications;
 
-if (typeof window !== 'undefined') {
-	(window as any).createNotification = createNotification;
-}
 export function createNotification(
 	message: string,
 	type: NotificationType = NotificationType.Error,
