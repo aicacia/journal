@@ -58,7 +58,7 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-500e04d5.ttf",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-c647367d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/start-e0fc4915.js",
+  "/journal/internal/immutable/start-b2f87b07.js",
   "/journal/internal/immutable/components/pages/_layout.svelte-6bb0572b.js",
   "/journal/internal/immutable/assets/+layout-44867014.css",
   "/journal/internal/immutable/components/error.svelte-d93080df.js",
@@ -373,7 +373,7 @@ const j = [
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1660948995134", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
+], s = "1660949955148", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
 m.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((a) => a.addAll(u)).then(() => {
