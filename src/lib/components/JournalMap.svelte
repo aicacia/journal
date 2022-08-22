@@ -5,8 +5,8 @@
 	import { currentDate } from '$lib/state/currentDate';
 	import Map from './Map.svelte';
 	import UpdateEntry from './UpdateEntry.svelte';
-	import Controls from './Controls.svelte';
 	import { sortByDate } from '$lib/util';
+	import DesktopControls from './DesktopControls.svelte';
 
 	let selectedJournalEntry: IJournalEntry | undefined;
 	let updateOpen = false;
@@ -39,7 +39,7 @@
 
 <div class="flex flex-col w-full h-full">
 	<div class="absolute top-0 left-0 w-full z-[1000]">
-		<Controls />
+		<DesktopControls />
 	</div>
 	<Map bind:latitude bind:longitude {entries} {onSelect} />
 </div>

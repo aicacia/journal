@@ -12,7 +12,6 @@
 	let today = new Date();
 	let selectedJournalEntry: IJournalEntry | undefined;
 	let updateOpen = false;
-	let innerWidth = 1024;
 
 	function onSelect(journalEntry: IJournalEntry) {
 		selectedJournalEntry = journalEntry;
@@ -28,16 +27,8 @@
 	});
 </script>
 
-<svelte:window bind:innerWidth />
-
-<div class="flex flex-col w-full h-full pb-[80px]">
-	{#if innerWidth >= 640}
-		<Controls />
-	{/if}
+<Controls>
 	<Calender date={$currentDate} {today} {onSelect} />
-	{#if innerWidth < 640}
-		<Controls />
-	{/if}
-</div>
+</Controls>
 
 <UpdateEntry bind:open={updateOpen} journalEntry={selectedJournalEntry} />

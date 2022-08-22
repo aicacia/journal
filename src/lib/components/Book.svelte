@@ -14,7 +14,7 @@
 	}
 </script>
 
-<div class="container mx-auto bg-white p-8 my-2">
+<div class="container mx-auto bg-white p-8 my-2 overflow-auto">
 	<div class="grid grid-cols-1 divide-y-2">
 		{#each entries as entry (entry.id)}
 			<div>

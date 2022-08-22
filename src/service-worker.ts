@@ -5,14 +5,14 @@ import { build, files, version } from '$service-worker';
 const worker = self as unknown as ServiceWorkerGlobalScope;
 const FILES = `cache${version}`;
 
-const toCache = build.concat(files);
-const staticAssets = new Set(toCache);
+const to_cache = build.concat(files);
+const staticAssets = new Set(to_cache);
 
 worker.addEventListener('install', (event) => {
 	event.waitUntil(
 		caches
 			.open(FILES)
-			.then((cache) => cache.addAll(toCache))
+			.then((cache) => cache.addAll(to_cache))
 			.then(() => {
 				worker.skipWaiting();
 			})
@@ -22,6 +22,7 @@ worker.addEventListener('install', (event) => {
 worker.addEventListener('activate', (event) => {
 	event.waitUntil(
 		caches.keys().then(async (keys) => {
+			// delete old caches
 			for (const key of keys) {
 				if (key !== FILES) await caches.delete(key);
 			}
