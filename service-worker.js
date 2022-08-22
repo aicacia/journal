@@ -58,12 +58,12 @@ const j = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-500e04d5.ttf",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-c647367d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/start-b2f87b07.js",
+  "/journal/internal/immutable/start-983bee68.js",
   "/journal/internal/immutable/components/pages/_layout.svelte-6bb0572b.js",
-  "/journal/internal/immutable/assets/+layout-44867014.css",
+  "/journal/internal/immutable/assets/+layout-0b83c74c.css",
   "/journal/internal/immutable/components/error.svelte-d93080df.js",
-  "/journal/internal/immutable/components/pages/_page.svelte-e2a055b2.js",
-  "/journal/internal/immutable/assets/+page-e928a23f.css",
+  "/journal/internal/immutable/components/pages/_page.svelte-a5fc3352.js",
+  "/journal/internal/immutable/assets/+page-2804524f.css",
   "/journal/internal/immutable/components/pages/privacy-policy/_page.svelte-61431786.js",
   "/journal/internal/immutable/components/pages/terms-of-service/_page.svelte-db9c7a1d.js",
   "/journal/internal/immutable/chunks/preload-helper-c47b4fa9.js",
@@ -72,7 +72,7 @@ const j = [
   "/journal/internal/immutable/assets/Layout-6bf551a2.css",
   "/journal/internal/immutable/chunks/0-7107c61b.js",
   "/journal/internal/immutable/chunks/1-53212209.js",
-  "/journal/internal/immutable/chunks/2-c336cc33.js",
+  "/journal/internal/immutable/chunks/2-f989654b.js",
   "/journal/internal/immutable/chunks/3-8b13983f.js",
   "/journal/internal/immutable/chunks/4-63af4047.js",
   "/journal/internal/immutable/chunks/leaflet-src-64c8bc5b.js",
@@ -373,7 +373,7 @@ const j = [
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1660949955148", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
+], s = "1661167371858", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
 m.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((a) => a.addAll(u)).then(() => {
