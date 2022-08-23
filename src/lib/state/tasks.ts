@@ -1,5 +1,6 @@
+import { browser } from '$app/env';
 import { remoteStorage } from '$lib/remoteStorage';
-import { derived, writable } from 'svelte/store';
+import { derived, get, writable } from 'svelte/store';
 
 const loadingWritable = writable(false);
 
@@ -11,3 +12,14 @@ remoteStorage.addEventListener('sync-req-done', () => {
 remoteStorage.addEventListener('sync-done', () => {
 	loadingWritable.set(false);
 });
+
+if (browser) {
+	window.addEventListener('beforeunload', (e) => {
+		if (get(loadingWritable)) {
+			const confirmationMessage =
+				'It looks like you have been editing something. If you leave before saving, your changes will be lost.';
+			(e || window.event).returnValue = confirmationMessage;
+			return confirmationMessage;
+		}
+	});
+}
