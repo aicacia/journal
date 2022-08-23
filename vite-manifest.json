@@ -3,13 +3,13 @@
     "file": "internal/immutable/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
     "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff2"
   },
-  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2": {
-    "file": "internal/immutable/assets/KaTeX_Caligraphic-Bold-de7701e4.woff2",
-    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2"
-  },
   "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2": {
     "file": "internal/immutable/assets/KaTeX_Caligraphic-Regular-5d53e70a.woff2",
     "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2": {
+    "file": "internal/immutable/assets/KaTeX_Caligraphic-Bold-de7701e4.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2"
   },
   "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff2": {
     "file": "internal/immutable/assets/KaTeX_Fraktur-Bold-74444efd.woff2",
@@ -79,13 +79,13 @@
     "file": "internal/immutable/assets/KaTeX_AMS-Regular-30da91e8.woff",
     "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff"
   },
-  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff": {
-    "file": "internal/immutable/assets/KaTeX_Caligraphic-Bold-1ae6bd74.woff",
-    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff"
-  },
   "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff": {
     "file": "internal/immutable/assets/KaTeX_Caligraphic-Regular-3398dd02.woff",
     "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff": {
+    "file": "internal/immutable/assets/KaTeX_Caligraphic-Bold-1ae6bd74.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff"
   },
   "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff": {
     "file": "internal/immutable/assets/KaTeX_Fraktur-Bold-9be7ceb8.woff",
@@ -159,13 +159,13 @@
     "file": "internal/immutable/assets/KaTeX_AMS-Regular-68534840.ttf",
     "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.ttf"
   },
-  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf": {
-    "file": "internal/immutable/assets/KaTeX_Caligraphic-Bold-07d8e303.ttf",
-    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf"
-  },
   "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf": {
     "file": "internal/immutable/assets/KaTeX_Caligraphic-Regular-ed0b7437.ttf",
     "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf": {
+    "file": "internal/immutable/assets/KaTeX_Caligraphic-Bold-07d8e303.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf"
   },
   "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf": {
     "file": "internal/immutable/assets/KaTeX_Fraktur-Bold-9163df9c.ttf",
@@ -236,7 +236,7 @@
     "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "internal/immutable/start-983bee68.js",
+    "file": "internal/immutable/start-db173dba.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -271,13 +271,13 @@
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "internal/immutable/components/pages/_page.svelte-a5fc3352.js",
+    "file": "internal/immutable/components/pages/_page.svelte-e65caac6.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-01b389ab.js",
       "_preload-helper-c47b4fa9.js",
-      "_Layout-770d4a1b.js"
+      "_Layout-501db161.js"
     ],
     "dynamicImports": [
       "node_modules/prismjs/components/prism-abap.min.js",
@@ -570,7 +570,7 @@
       "node_modules/prismjs/components/prism-xquery.min.js",
       "node_modules/prismjs/components/prism-yang.min.js",
       "node_modules/prismjs/components/prism-zig.min.js",
-      "_leaflet-src-64c8bc5b.js"
+      "_leaflet-src-2ee776ca.js"
     ],
     "css": [
       "internal/immutable/assets/+page-2804524f.css"
@@ -638,23 +638,23 @@
     ]
   },
   "src/routes/privacy-policy/+page.svelte": {
-    "file": "internal/immutable/components/pages/privacy-policy/_page.svelte-61431786.js",
+    "file": "internal/immutable/components/pages/privacy-policy/_page.svelte-ca0a48bb.js",
     "src": "src/routes/privacy-policy/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-01b389ab.js",
       "_preload-helper-c47b4fa9.js",
-      "_Layout-770d4a1b.js"
+      "_Layout-501db161.js"
     ]
   },
   "src/routes/terms-of-service/+page.svelte": {
-    "file": "internal/immutable/components/pages/terms-of-service/_page.svelte-db9c7a1d.js",
+    "file": "internal/immutable/components/pages/terms-of-service/_page.svelte-d6bbcbb1.js",
     "src": "src/routes/terms-of-service/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-01b389ab.js",
       "_preload-helper-c47b4fa9.js",
-      "_Layout-770d4a1b.js"
+      "_Layout-501db161.js"
     ]
   },
   "_preload-helper-c47b4fa9.js": {
@@ -666,8 +666,8 @@
   "_index-01b389ab.js": {
     "file": "internal/immutable/chunks/index-01b389ab.js"
   },
-  "_Layout-770d4a1b.js": {
-    "file": "internal/immutable/chunks/Layout-770d4a1b.js",
+  "_Layout-501db161.js": {
+    "file": "internal/immutable/chunks/Layout-501db161.js",
     "imports": [
       "_index-01b389ab.js",
       "_preload-helper-c47b4fa9.js"
@@ -698,43 +698,43 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "internal/immutable/chunks/2-f989654b.js",
+    "file": "internal/immutable/chunks/2-a3ac2d6e.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
       "src/routes/+page.svelte",
       "_index-01b389ab.js",
       "_preload-helper-c47b4fa9.js",
-      "_Layout-770d4a1b.js"
+      "_Layout-501db161.js"
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "internal/immutable/chunks/3-8b13983f.js",
+    "file": "internal/immutable/chunks/3-89b4bd26.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
       "src/routes/privacy-policy/+page.svelte",
       "_index-01b389ab.js",
       "_preload-helper-c47b4fa9.js",
-      "_Layout-770d4a1b.js"
+      "_Layout-501db161.js"
     ]
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "internal/immutable/chunks/4-63af4047.js",
+    "file": "internal/immutable/chunks/4-558f6a26.js",
     "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
       "src/routes/terms-of-service/+page.svelte",
       "_index-01b389ab.js",
       "_preload-helper-c47b4fa9.js",
-      "_Layout-770d4a1b.js"
+      "_Layout-501db161.js"
     ]
   },
-  "_leaflet-src-64c8bc5b.js": {
-    "file": "internal/immutable/chunks/leaflet-src-64c8bc5b.js",
+  "_leaflet-src-2ee776ca.js": {
+    "file": "internal/immutable/chunks/leaflet-src-2ee776ca.js",
     "isDynamicEntry": true,
     "imports": [
-      "_Layout-770d4a1b.js"
+      "_Layout-501db161.js"
     ]
   },
   "_widget-e39ea803.js": {

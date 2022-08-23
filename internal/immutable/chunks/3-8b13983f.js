@@ -1,1 +1,0 @@
-import{default as e}from"../components/pages/privacy-policy/_page.svelte-61431786.js";import"./index-01b389ab.js";import"./preload-helper-c47b4fa9.js";import"./Layout-770d4a1b.js";export{e as component};
