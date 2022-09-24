@@ -5,9 +5,10 @@ import { v4 } from 'uuid';
 import { remoteStorage } from '../remoteStorage';
 import { getYearMonth } from '$lib/util';
 
+export const SCHEMA_NAME = 'journal-entry';
+
 remoteStorage.access.claim('journal', 'rw');
 
-export const SCHEMA_NAME = 'journal-entry';
 export const journalRS = remoteStorage.scope('/journal/');
 
 journalRS.declareType(SCHEMA_NAME, {

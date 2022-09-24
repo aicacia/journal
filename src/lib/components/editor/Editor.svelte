@@ -13,7 +13,7 @@
 	import { isHotkey, isReadOnly, withSvelte } from 'svelte-slate';
 	import Slate from 'svelte-slate/plugins/Slate.svelte';
 	import Editable from 'svelte-slate/plugins/Editable.svelte';
-	import { createEditor, Editor } from 'slate';
+	import { createEditor, Editor, type BaseSelection } from 'slate';
 	import { withHistory } from 'slate-history';
 	import { DEFAULT_PLUGINS } from 'svelte-slate/plugins/DEFAULT_PLUGINS';
 	import ImageElement, { IMAGE_TYPE, withImages } from 'svelte-slate/plugins/ImageElement.svelte';
@@ -36,7 +36,7 @@
 			children: [{ text: '' }]
 		}
 	];
-	export let selection: Selection | null = null;
+	export let selection: BaseSelection | null = null;
 	export let readOnly = false;
 	export let autoFocus = false;
 	export let placeholder = 'Type...';

@@ -1,4 +1,4 @@
-import { browser } from '$app/env';
+import { browser } from '$app/environment';
 import { derived } from 'svelte/store';
 import { localstorageWritable } from 'svelte-localstorage-writable';
 

@@ -29,9 +29,6 @@ const config = {
 				'font-src': ['self', 'blob:', 'data:'],
 				'style-src': ['self', 'unsafe-inline']
 			}
-		},
-		prerender: {
-			default: true
 		}
 	}
 };

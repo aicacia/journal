@@ -7,7 +7,7 @@
 	import { showByMonth, type IJournalEntry } from '$lib/state/journal';
 	import UpdateEntry from './UpdateEntry.svelte';
 	import { onMount } from 'svelte';
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 
 	let today = new Date();
 	let selectedJournalEntry: IJournalEntry | undefined;

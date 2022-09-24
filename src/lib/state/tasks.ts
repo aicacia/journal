@@ -1,4 +1,4 @@
-import { browser } from '$app/env';
+import { browser } from '$app/environment';
 import { remoteStorage } from '$lib/remoteStorage';
 import { derived, get, writable } from 'svelte/store';
 
