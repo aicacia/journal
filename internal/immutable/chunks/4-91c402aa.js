@@ -1,1 +1,0 @@
-import{default as e}from"../components/pages/terms-of-service/_page.svelte-8b96291d.js";import"./index-d280f66e.js";import"./paths-e96a59cd.js";import"./Layout-5e1839f1.js";import"./preload-helper-0ffe6af8.js";export{e as component};
