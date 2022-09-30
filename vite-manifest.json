@@ -171,13 +171,13 @@
     "file": "internal/immutable/assets/KaTeX_Fraktur-Bold-9163df9c.ttf",
     "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf"
   },
-  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf": {
-    "file": "internal/immutable/assets/KaTeX_Fraktur-Regular-1e6f9579.ttf",
-    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf"
-  },
   "node_modules/katex/dist/fonts/KaTeX_Main-Bold.ttf": {
     "file": "internal/immutable/assets/KaTeX_Main-Bold-138ac28d.ttf",
     "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf": {
+    "file": "internal/immutable/assets/KaTeX_Fraktur-Regular-1e6f9579.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf"
   },
   "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.ttf": {
     "file": "internal/immutable/assets/KaTeX_Main-BoldItalic-70ee1f64.ttf",
@@ -236,14 +236,14 @@
     "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "internal/immutable/start-72f959ac.js",
+    "file": "internal/immutable/start-d79ed624.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-0ffe6af8.js",
-      "_index-c4cd3e84.js",
-      "_singletons-3e31fb08.js",
-      "_paths-7b43e7f5.js"
+      "_index-5e6fc15a.js",
+      "_singletons-ec77e1b7.js",
+      "_paths-e1de2e66.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -254,33 +254,33 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "internal/immutable/components/pages/_layout.svelte-449af929.js",
+    "file": "internal/immutable/components/pages/_layout.svelte-3dd86b41.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-c4cd3e84.js"
+      "_index-5e6fc15a.js"
     ],
     "css": [
-      "internal/immutable/assets/_layout-a8bff55a.css"
+      "internal/immutable/assets/_layout-cbfb2d30.css"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "internal/immutable/components/error.svelte-e76ba16c.js",
+    "file": "internal/immutable/components/error.svelte-57fb662b.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-c4cd3e84.js",
-      "_singletons-3e31fb08.js"
+      "_index-5e6fc15a.js",
+      "_singletons-ec77e1b7.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "internal/immutable/components/pages/_page.svelte-29fe1781.js",
+    "file": "internal/immutable/components/pages/_page.svelte-2e37a577.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-c4cd3e84.js",
-      "_paths-7b43e7f5.js",
-      "_Layout-46469e46.js",
+      "_index-5e6fc15a.js",
+      "_paths-e1de2e66.js",
+      "_Layout-7cd45d7a.js",
       "_preload-helper-0ffe6af8.js"
     ],
     "dynamicImports": [
@@ -575,10 +575,10 @@
       "node_modules/prismjs/components/prism-yang.min.js",
       "node_modules/prismjs/components/prism-zig.min.js",
       "node_modules/leaflet/dist/leaflet-src.esm.js",
-      "_leaflet.markercluster-src-dde6e6f9.js"
+      "_leaflet.markercluster-src-0357259f.js"
     ],
     "css": [
-      "internal/immutable/assets/_page-adaa24cf.css"
+      "internal/immutable/assets/_page-9a0a41cb.css"
     ],
     "assets": [
       "internal/immutable/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
@@ -643,48 +643,59 @@
     ]
   },
   "src/routes/privacy-policy/+page.svelte": {
-    "file": "internal/immutable/components/pages/privacy-policy/_page.svelte-fcdd55a4.js",
+    "file": "internal/immutable/components/pages/privacy-policy/_page.svelte-f997c350.js",
     "src": "src/routes/privacy-policy/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-c4cd3e84.js",
-      "_paths-7b43e7f5.js",
-      "_Layout-46469e46.js"
+      "_index-5e6fc15a.js",
+      "_paths-e1de2e66.js",
+      "_Layout-7cd45d7a.js"
     ]
   },
   "src/routes/terms-of-service/+page.svelte": {
-    "file": "internal/immutable/components/pages/terms-of-service/_page.svelte-5de1256d.js",
+    "file": "internal/immutable/components/pages/terms-of-service/_page.svelte-001c3990.js",
     "src": "src/routes/terms-of-service/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-c4cd3e84.js",
-      "_paths-7b43e7f5.js",
-      "_Layout-46469e46.js"
+      "_index-5e6fc15a.js",
+      "_paths-e1de2e66.js",
+      "_Layout-7cd45d7a.js"
     ]
   },
-  "_singletons-3e31fb08.js": {
-    "file": "internal/immutable/chunks/singletons-3e31fb08.js",
+  "src/routes/+layout.ts": {
+    "file": "internal/immutable/modules/pages/_layout.ts-ccf77788.js",
+    "src": "src/routes/+layout.ts",
+    "isEntry": true,
     "imports": [
-      "_paths-7b43e7f5.js"
+      "__layout-c2405b24.js"
     ]
   },
-  "_paths-7b43e7f5.js": {
-    "file": "internal/immutable/chunks/paths-7b43e7f5.js",
+  "_singletons-ec77e1b7.js": {
+    "file": "internal/immutable/chunks/singletons-ec77e1b7.js",
     "imports": [
-      "_index-c4cd3e84.js"
+      "_paths-e1de2e66.js"
+    ]
+  },
+  "_paths-e1de2e66.js": {
+    "file": "internal/immutable/chunks/paths-e1de2e66.js",
+    "imports": [
+      "_index-5e6fc15a.js"
     ]
   },
   "_preload-helper-0ffe6af8.js": {
     "file": "internal/immutable/chunks/preload-helper-0ffe6af8.js"
   },
-  "_index-c4cd3e84.js": {
-    "file": "internal/immutable/chunks/index-c4cd3e84.js"
+  "_index-5e6fc15a.js": {
+    "file": "internal/immutable/chunks/index-5e6fc15a.js"
   },
-  "_Layout-46469e46.js": {
-    "file": "internal/immutable/chunks/Layout-46469e46.js",
+  "__layout-c2405b24.js": {
+    "file": "internal/immutable/chunks/_layout-c2405b24.js"
+  },
+  "_Layout-7cd45d7a.js": {
+    "file": "internal/immutable/chunks/Layout-7cd45d7a.js",
     "imports": [
-      "_index-c4cd3e84.js",
-      "_paths-7b43e7f5.js",
+      "_index-5e6fc15a.js",
+      "_paths-e1de2e66.js",
       "_preload-helper-0ffe6af8.js"
     ],
     "dynamicImports": [
@@ -695,15 +706,16 @@
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "internal/immutable/chunks/0-4d63dcc7.js",
+    "file": "internal/immutable/chunks/0-49abb20b.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
+      "__layout-c2405b24.js",
       "src/routes/+layout.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "internal/immutable/chunks/1-da5212ba.js",
+    "file": "internal/immutable/chunks/1-aaa425e1.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -711,7 +723,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "internal/immutable/chunks/2-f0521d6d.js",
+    "file": "internal/immutable/chunks/2-a7745780.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -719,7 +731,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "internal/immutable/chunks/3-b1197c4d.js",
+    "file": "internal/immutable/chunks/3-cf8b8c98.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -727,7 +739,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "internal/immutable/chunks/4-fc3b9b72.js",
+    "file": "internal/immutable/chunks/4-844737dc.js",
     "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
@@ -739,11 +751,11 @@
     "src": "node_modules/leaflet/dist/leaflet-src.esm.js",
     "isDynamicEntry": true
   },
-  "_leaflet.markercluster-src-dde6e6f9.js": {
-    "file": "internal/immutable/chunks/leaflet.markercluster-src-dde6e6f9.js",
+  "_leaflet.markercluster-src-0357259f.js": {
+    "file": "internal/immutable/chunks/leaflet.markercluster-src-0357259f.js",
     "isDynamicEntry": true,
     "imports": [
-      "_Layout-46469e46.js"
+      "_Layout-7cd45d7a.js"
     ]
   },
   "_widget-de120465.js": {
@@ -2200,16 +2212,16 @@
     "src": "node_modules/prismjs/components/prism-zig.min.js",
     "isDynamicEntry": true
   },
-  "src/routes/+layout.css": {
-    "file": "internal/immutable/assets/_layout-a8bff55a.css",
-    "src": "src/routes/+layout.css"
-  },
-  "src/routes/+page.css": {
-    "file": "internal/immutable/assets/_page-adaa24cf.css",
-    "src": "src/routes/+page.css"
-  },
   "Layout.css": {
     "file": "internal/immutable/assets/Layout-6bf551a2.css",
     "src": "Layout.css"
+  },
+  "src/routes/+layout.css": {
+    "file": "internal/immutable/assets/_layout-cbfb2d30.css",
+    "src": "src/routes/+layout.css"
+  },
+  "src/routes/+page.css": {
+    "file": "internal/immutable/assets/_page-9a0a41cb.css",
+    "src": "src/routes/+page.css"
   }
 }
