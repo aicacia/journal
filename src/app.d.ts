@@ -8,6 +8,8 @@ declare namespace App {
 	// interface Stuff {}
 }
 
-declare global {
-	interface Window {}
+declare namespace svelte.JSX {
+	interface HTMLAttributes<T> {
+		onlongpress?: (event: CustomEvent<MouseEvent>) => void;
+	}
 }
