@@ -61,7 +61,7 @@
 		"svelte-icons": "^2.1.0",
 		"svelte-localstorage-writable": "^0.1.0",
 		"svelte-portal": "^2.2.0",
-		"svelte-slate": "^0.1.65",
+		"svelte-slate": "^0.1.66",
 		"uuid": "^9.0.0",
 		"vest": "^4.6.7"
 	}
