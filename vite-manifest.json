@@ -236,7 +236,7 @@
     "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "internal/immutable/start-6ae808dd.js",
+    "file": "internal/immutable/start-f15a5fa6.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -274,7 +274,7 @@
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "internal/immutable/components/pages/_page.svelte-3baa0391.js",
+    "file": "internal/immutable/components/pages/_page.svelte-6b3a7abe.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -730,7 +730,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "internal/immutable/chunks/2-72f42bc8.js",
+    "file": "internal/immutable/chunks/2-69102e25.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
