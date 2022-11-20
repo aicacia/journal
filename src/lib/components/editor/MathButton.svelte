@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Location } from 'slate';
 	import { onMount } from 'svelte';
-	import { getEditorContext, getFocusedContext } from 'svelte-slate/components/Slate.svelte';
-	import { isHotkey } from 'svelte-slate/isHotkey';
+	import { getEditorContext, getFocusedContext } from 'svelte-slate';
+	import { isHotkey } from 'svelte-slate';
 	import Button from './Button.svelte';
 	import MdFunctions from 'svelte-icons/md/MdFunctions.svelte';
 	import MathEditor from 'svelte-slate/plugins/MathEditor.svelte';
@@ -29,29 +29,6 @@
 	function onDone(math: string, inline: boolean) {
 		insertMath(editor, math, inline, at);
 	}
-
-	function onKeyDown(event: KeyboardEvent) {
-		if (isHotkey('ctrl+m', event)) {
-			event.preventDefault();
-
-			if (focused) {
-				at = editor.selection ? editor.selection.anchor || editor.selection.focus : undefined;
-				math = '';
-				inline = true;
-				open = true;
-			} else {
-				open = false;
-			}
-		}
-	}
-
-	onMount(() => {
-		document.body.addEventListener('keydown', onKeyDown);
-
-		return () => {
-			document.body.removeEventListener('keydown', onKeyDown);
-		};
-	});
 </script>
 
 <MathEditor bind:open bind:math bind:inline {onDone} />

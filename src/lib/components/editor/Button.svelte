@@ -5,7 +5,7 @@
 	export let onMouseDown: (event: MouseEvent) => void;
 </script>
 
-<button class={$$props['class']} class:active on:mousedown={onMouseDown}>
+<button class={$$props['class']} class:active on:mousedown|stopPropagation={onMouseDown}>
 	<div>
 		<slot />
 	</div>

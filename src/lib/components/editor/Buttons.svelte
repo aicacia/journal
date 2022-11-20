@@ -4,8 +4,8 @@
 	import ImageButton from './ImageButton.svelte';
 	import CodeButton from './CodeButton.svelte';
 	import MathButton from './MathButton.svelte';
+	import DiCode from 'svelte-icons/di/DiCode.svelte';
 	import MdFormatBold from 'svelte-icons/md/MdFormatBold.svelte';
-	import MdCode from 'svelte-icons/md/MdCode.svelte';
 	import MdLooksOne from 'svelte-icons/md/MdLooksOne.svelte';
 	import MdLooksTwo from 'svelte-icons/md/MdLooksTwo.svelte';
 	import MdFormatItalic from 'svelte-icons/md/MdFormatItalic.svelte';
@@ -18,7 +18,7 @@
 <MarkButton format="bold"><MdFormatBold /></MarkButton>
 <MarkButton format="italic"><MdFormatItalic /></MarkButton>
 <MarkButton format="underline"><MdFormatUnderlined /></MarkButton>
-<MarkButton format="code"><MdCode /></MarkButton>
+<MarkButton format="code"><DiCode /></MarkButton>
 <BlockButton format="heading1"><MdLooksOne /></BlockButton>
 <BlockButton format="heading2"><MdLooksTwo /></BlockButton>
 <BlockButton format="block-quote"><MdFormatQuote /></BlockButton>

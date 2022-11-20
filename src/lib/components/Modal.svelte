@@ -12,9 +12,11 @@
 
 	let key = createInsecureID();
 	let prevOpen: boolean;
+	let openedAt: number;
 	$: if (prevOpen !== open) {
 		key = createInsecureID();
 		prevOpen = open;
+		openedAt = Date.now();
 	}
 
 	function close() {
@@ -23,8 +25,10 @@
 	}
 
 	function onClickOutside() {
-		open = false;
-		onClose();
+		if (openedAt <= Date.now() - 100) {
+			open = false;
+			onClose();
+		}
 	}
 </script>
 

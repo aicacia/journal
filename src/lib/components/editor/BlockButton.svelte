@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getEditorContext } from 'svelte-slate/components/Slate.svelte';
+	import { getEditorContext } from 'svelte-slate';
 	import Button from './Button.svelte';
 	import { isBlockActive, toggleBlock } from 'svelte-slate/plugins/utils';
 
@@ -10,7 +10,6 @@
 	$: editor = $editorContext;
 	$: active = isBlockActive(editor, format);
 	$: onMouseDown = (event: MouseEvent) => {
-		event.preventDefault();
 		toggleBlock(editor, format);
 	};
 </script>
