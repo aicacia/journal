@@ -1,13 +1,12 @@
 <script lang="ts">
 	import type { Location } from 'slate';
-	import { onMount } from 'svelte';
-	import { getEditorContext, getFocusedContext } from 'svelte-slate';
+	import { addEventListener, getEditorContext, getFocusedContext } from 'svelte-slate';
 	import { isHotkey } from 'svelte-slate';
 	import Button from './Button.svelte';
 	import MdFunctions from 'svelte-icons/md/MdFunctions.svelte';
-	import MathEditor from 'svelte-slate/plugins/MathEditor.svelte';
-	import { insertMath, MATH_TYPE } from 'svelte-slate/plugins/MathElement.svelte';
 	import { isBlockActive } from 'svelte-slate/plugins/utils';
+	import { insertMath, MATH_TYPE } from 'svelte-slate/plugins/MathElement.svelte';
+	import MathEditor from 'svelte-slate/plugins/MathEditor.svelte';
 
 	const editorContext = getEditorContext();
 	const focusedContext = getFocusedContext();
@@ -16,7 +15,7 @@
 	$: focused = $focusedContext;
 	$: active = isBlockActive(editor, MATH_TYPE);
 
-	let at: Location;
+	let at: Location | undefined;
 	let open = false;
 	let math = '';
 	let inline = true;
@@ -29,6 +28,19 @@
 	function onDone(math: string, inline: boolean) {
 		insertMath(editor, math, inline, at);
 	}
+
+	addEventListener('onKeyDown', (e) => {
+		if (isHotkey('ctrl+m', e)) {
+			if (focused) {
+				at = editor.selection ? editor.selection.anchor || editor.selection.focus : undefined;
+				math = '';
+				inline = true;
+				open = true;
+			} else {
+				open = false;
+			}
+		}
+	});
 </script>
 
 <MathEditor bind:open bind:math bind:inline {onDone} />

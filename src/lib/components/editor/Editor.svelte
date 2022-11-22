@@ -1,4 +1,4 @@
-<svelte:options immutable={true} />
+<svelte:options immutable />
 
 <script lang="ts" context="module">
 	const HOTKEYS = {
@@ -10,19 +10,15 @@
 </script>
 
 <script lang="ts">
-	import { isHotkey, isReadOnly, withSvelte } from 'svelte-slate';
+	import { isHotkey, withSvelte } from 'svelte-slate';
 	import Slate from 'svelte-slate/plugins/Slate.svelte';
 	import Editable from 'svelte-slate/plugins/Editable.svelte';
-	import { createEditor, Editor, Node, type BaseSelection, type NodeEntry } from 'slate';
+	import { createEditor, type BaseSelection } from 'slate';
 	import { withHistory } from 'slate-history';
 	import { DEFAULT_PLUGINS } from 'svelte-slate/plugins/DEFAULT_PLUGINS';
 	import ImageElement, { IMAGE_TYPE, withImages } from 'svelte-slate/plugins/ImageElement.svelte';
 	import { longpress } from '$lib/longpress';
-	import CodeElement, {
-		CODE_TYPE,
-		isCodeElement,
-		withCode
-	} from 'svelte-slate/plugins/CodeElement.svelte';
+	import CodeElement, { CODE_TYPE, withCode } from 'svelte-slate/plugins/CodeElement.svelte';
 	import HoveringToolbar from 'svelte-slate/plugins/HoveringToolbar.svelte';
 	import { toggleMark } from 'svelte-slate/plugins/utils';
 	import MathElement, { MATH_TYPE, withMath } from 'svelte-slate/plugins/MathElement.svelte';
@@ -59,24 +55,6 @@
 			}
 		});
 	}
-
-	function onLongPress() {
-		if (!isReadOnly(editor)) {
-			let match: NodeEntry<Node> | undefined;
-			if (editor.selection) {
-				const result = Array.from(
-					Editor.nodes(editor, {
-						at: Editor.unhangRange(editor, editor.selection),
-						match: isCodeElement as any
-					})
-				);
-				match = result[0];
-			}
-			if (!match) {
-				open = true;
-			}
-		}
-	}
 </script>
 
 <Slate bind:editor bind:selection bind:value {plugins}>
@@ -85,7 +63,7 @@
 			<Buttons />
 		</div>
 	</HoveringToolbar>
-	<div class="flex flex-grow" use:longpress {id} {name} on:longpress={onLongPress}>
+	<div class="flex flex-grow" use:longpress {id} {name}>
 		<Editable
 			bind:ref
 			class="flex flex-grow flex-col"

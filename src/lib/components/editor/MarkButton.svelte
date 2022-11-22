@@ -6,9 +6,11 @@
 	export let format: string;
 
 	const editorContext = getEditorContext();
+
 	$: editor = $editorContext;
 	$: active = isMarkActive(editor, format);
 	$: onMouseDown = (event: MouseEvent) => {
+		event.preventDefault();
 		toggleMark(editor, format);
 	};
 </script>

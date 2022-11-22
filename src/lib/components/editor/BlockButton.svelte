@@ -10,6 +10,7 @@
 	$: editor = $editorContext;
 	$: active = isBlockActive(editor, format);
 	$: onMouseDown = (event: MouseEvent) => {
+		event.preventDefault();
 		toggleBlock(editor, format);
 	};
 </script>

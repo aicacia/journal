@@ -26,7 +26,7 @@
 </script>
 
 <Modal bind:open>
-	<h1 slot="title">{$currentDate.toLocaleDateString()} {$currentDate.toLocaleTimeString()}</h1>
+	<h3 slot="title">{$currentDate.toLocaleDateString()} {$currentDate.toLocaleTimeString()}</h3>
 	<div class="flex flex-col flex-grow min-h-full">
 		<EntryEditor bind:journalEntry />
 		<div class="flex flex-row flex-shrink-0 justify-end">

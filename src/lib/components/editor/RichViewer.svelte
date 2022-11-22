@@ -1,9 +1,9 @@
-<svelte:options immutable={true} />
+<svelte:options immutable />
 
 <script lang="ts">
 	import Editor from './Editor.svelte';
 
-	export let id: string = undefined;
+	export let id: string | undefined = undefined;
 	export let value: any;
 	export let placeholder = '';
 	export let autoFocus = false;

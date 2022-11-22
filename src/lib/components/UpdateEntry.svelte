@@ -52,10 +52,10 @@
 </script>
 
 <Modal bind:open>
-	<h1 slot="title">
+	<h3 slot="title">
 		{journalEntry?.createdAt.toLocaleDateString()}
 		{journalEntry?.createdAt.toLocaleTimeString()}
-	</h1>
+	</h3>
 	{#if journalEntry}
 		<div class="flex flex-col flex-grow min-h-full">
 			<EntryEditor bind:journalEntry />
@@ -68,11 +68,11 @@
 </Modal>
 
 <Modal bind:open={deleteOpen} small>
-	<h1 slot="title">
+	<h3 slot="title">
 		Delete Entry For
 		{journalEntry?.createdAt.toLocaleDateString()}
 		{journalEntry?.createdAt.toLocaleTimeString()}
-	</h1>
+	</h3>
 	{#if journalEntry}
 		<div class="flex flex-row flex-shrink-0 justify-between">
 			<button type="button" class="btn secondary" on:click={onCloseDelete}>Cancel</button>

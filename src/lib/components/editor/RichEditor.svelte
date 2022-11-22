@@ -1,4 +1,4 @@
-<svelte:options immutable={true} />
+<svelte:options immutable />
 
 <script lang="ts">
 	import type { BaseEditor, Selection } from 'slate';
@@ -11,7 +11,7 @@
 	export let value: any;
 	export let selection: Selection | null = null;
 	export let placeholder = 'Type...';
-	export let editor: ISvelteEditor | BaseEditor | HistoryEditor | undefined = undefined;
+	export let editor: (BaseEditor & ISvelteEditor & HistoryEditor) | undefined = undefined;
 	export let autoFocus = false;
 
 	$: if (!value || value.length === 0) {
