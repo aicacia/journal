@@ -26,7 +26,7 @@
 </script>
 
 <div class="flex flex-col md:flex-row justify-between">
-	<div class="flex justify-center md:justify-start">
+	<div class="flex flex-shrink justify-center md:justify-start">
 		<button class="btn primary" on:click={onToday}>Today</button>
 		<Dropdown>
 			<button
@@ -58,12 +58,10 @@
 			>
 		</Dropdown>
 	</div>
-	<div class="flex-1">
-		<div class="flex justify-center">
-			<PrevNext {months} />
-		</div>
+	<div class="flex flex-grow justify-center">
+		<PrevNext {months} />
 	</div>
-	<div class="flex justify-center md:justify-end">
+	<div class="flex flex-shrink justify-center md:justify-end">
 		<button class="btn primary px-4" on:click={onOpenCreate}>Create</button>
 	</div>
 </div>
