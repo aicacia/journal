@@ -17,7 +17,6 @@
 	import { withHistory } from 'slate-history';
 	import { DEFAULT_PLUGINS } from 'svelte-slate/plugins/DEFAULT_PLUGINS';
 	import ImageElement, { IMAGE_TYPE, withImages } from 'svelte-slate/plugins/ImageElement.svelte';
-	import { longpress } from '$lib/longpress';
 	import CodeElement, { CODE_TYPE, withCode } from 'svelte-slate/plugins/CodeElement.svelte';
 	import HoveringToolbar from 'svelte-slate/plugins/HoveringToolbar.svelte';
 	import { toggleMark } from 'svelte-slate/plugins/utils';
@@ -63,7 +62,7 @@
 			<Buttons />
 		</div>
 	</HoveringToolbar>
-	<div class="flex flex-grow" use:longpress {id} {name}>
+	<div class="flex flex-grow" {id} {name}>
 		<Editable
 			bind:ref
 			class="flex flex-grow flex-col"

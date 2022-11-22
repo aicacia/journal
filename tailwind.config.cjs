@@ -12,7 +12,7 @@ const config = {
 		}
 	},
 	plugins: [
-		plugin(function ({ addVariant }) {
+		plugin(({ addVariant }) => {
 			addVariant('optional', '&:optional');
 			addVariant('group-optional', ':merge(.group):optional &');
 		})

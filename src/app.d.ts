@@ -7,9 +7,3 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
-
-declare namespace svelte.JSX {
-	interface HTMLAttributes<T> {
-		onlongpress?: (event: CustomEvent<MouseEvent>) => void;
-	}
-}
