@@ -236,7 +236,7 @@
     "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "internal/immutable/start-86265351.js",
+    "file": "internal/immutable/start-1beb33a5.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -274,7 +274,7 @@
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "internal/immutable/components/pages/_page.svelte-13f11adc.js",
+    "file": "internal/immutable/components/pages/_page.svelte-a41d3311.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -730,7 +730,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "internal/immutable/chunks/2-87d2d6eb.js",
+    "file": "internal/immutable/chunks/2-f382708b.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -2260,12 +2260,12 @@
     "file": "internal/immutable/assets/_layout-07d9ce22.css",
     "src": "src/routes/+layout.css"
   },
-  "Layout.css": {
-    "file": "internal/immutable/assets/Layout-6bf551a2.css",
-    "src": "Layout.css"
-  },
   "src/routes/+page.css": {
     "file": "internal/immutable/assets/_page-d8e857cb.css",
     "src": "src/routes/+page.css"
+  },
+  "Layout.css": {
+    "file": "internal/immutable/assets/Layout-6bf551a2.css",
+    "src": "Layout.css"
   }
 }
