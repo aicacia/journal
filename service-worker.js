@@ -385,7 +385,7 @@ const c = [
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1669129568828", m = self, r = `cache${s}`, u = c.concat(j), o = new Set(u);
+], s = "1669129599207", m = self, r = `cache${s}`, u = c.concat(j), o = new Set(u);
 m.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((a) => a.addAll(u)).then(() => {
