@@ -20,13 +20,13 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
-		"@tauri-apps/cli": "^1.2.0",
+		"@tauri-apps/cli": "^1.2.1",
 		"@types/is-url": "^1.2.30",
 		"@types/leaflet": "^1.9.0",
 		"@types/leaflet.markercluster": "^1.5.1",
 		"@types/postcss-import": "^14.0.0",
-		"@typescript-eslint/eslint-plugin": "^5.43.0",
-		"@typescript-eslint/parser": "^5.43.0",
+		"@typescript-eslint/eslint-plugin": "^5.44.0",
+		"@typescript-eslint/parser": "^5.44.0",
 		"autoprefixer": "^10.4.13",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -34,7 +34,7 @@
 		"postcss": "^8.4.19",
 		"postcss-import": "^15.0.0",
 		"postcss-nesting": "^10.2.0",
-		"prettier": "^2.7.1",
+		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte": "^3.53.1",
 		"svelte-check": "^2.9.2",
@@ -55,14 +55,14 @@
 		"leaflet.markercluster": "^1.5.3",
 		"query-string": "^7.1.1",
 		"remotestorage-widget": "^1.5.5",
-		"remotestoragejs": "2.0.0-beta.3",
+		"remotestoragejs": "2.0.0-beta.5",
 		"slate": "^0.86.0",
 		"slate-history": "^0.86.0",
 		"svelte-icons": "^2.1.0",
 		"svelte-localstorage-writable": "^0.1.0",
 		"svelte-portal": "^2.2.0",
-		"svelte-slate": "^0.1.69",
+		"svelte-slate": "^0.1.72",
 		"uuid": "^9.0.0",
-		"vest": "^4.6.7"
+		"vest": "^4.6.8"
 	}
 }
