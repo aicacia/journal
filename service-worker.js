@@ -1,4 +1,4 @@
-const c = [
+const j = [
   "/journal/internal/immutable/assets/KaTeX_AMS-Regular-0cdd387c.woff2",
   "/journal/internal/immutable/assets/KaTeX_Caligraphic-Bold-de7701e4.woff2",
   "/journal/internal/immutable/assets/KaTeX_Caligraphic-Regular-5d53e70a.woff2",
@@ -58,29 +58,29 @@ const c = [
   "/journal/internal/immutable/assets/KaTeX_Size3-Regular-500e04d5.ttf",
   "/journal/internal/immutable/assets/KaTeX_Size4-Regular-c647367d.ttf",
   "/journal/internal/immutable/assets/KaTeX_Typewriter-Regular-f01f3e87.ttf",
-  "/journal/internal/immutable/start-b71b8800.js",
-  "/journal/internal/immutable/components/pages/_layout.svelte-c52a1935.js",
+  "/journal/internal/immutable/start-22b7c171.js",
+  "/journal/internal/immutable/components/pages/_layout.svelte-dd2cdea3.js",
   "/journal/internal/immutable/assets/_layout-07d9ce22.css",
-  "/journal/internal/immutable/components/error.svelte-5cfbee3c.js",
-  "/journal/internal/immutable/components/pages/_page.svelte-61027c2d.js",
-  "/journal/internal/immutable/assets/_page-d8e857cb.css",
-  "/journal/internal/immutable/components/pages/privacy-policy/_page.svelte-967223a1.js",
-  "/journal/internal/immutable/components/pages/terms-of-service/_page.svelte-cac989b5.js",
+  "/journal/internal/immutable/components/error.svelte-cd1484f1.js",
+  "/journal/internal/immutable/components/pages/_page.svelte-ad1e3610.js",
+  "/journal/internal/immutable/assets/_page-360ed15e.css",
+  "/journal/internal/immutable/components/pages/privacy-policy/_page.svelte-3a460c0d.js",
+  "/journal/internal/immutable/components/pages/terms-of-service/_page.svelte-a1055ee8.js",
   "/journal/internal/immutable/modules/pages/_layout.ts-ccf77788.js",
-  "/journal/internal/immutable/chunks/singletons-ad9fd67b.js",
-  "/journal/internal/immutable/chunks/paths-c1c8869c.js",
-  "/journal/internal/immutable/chunks/index-2d37df30.js",
-  "/journal/internal/immutable/chunks/preload-helper-176e53da.js",
+  "/journal/internal/immutable/chunks/singletons-103bb081.js",
+  "/journal/internal/immutable/chunks/paths-9dec6077.js",
+  "/journal/internal/immutable/chunks/index-12db7b44.js",
+  "/journal/internal/immutable/chunks/preload-helper-245d08a1.js",
   "/journal/internal/immutable/chunks/_layout-c2405b24.js",
-  "/journal/internal/immutable/chunks/Layout-a9d3ae11.js",
+  "/journal/internal/immutable/chunks/Layout-13701e0c.js",
   "/journal/internal/immutable/assets/Layout-6bf551a2.css",
-  "/journal/internal/immutable/chunks/0-4224af1d.js",
-  "/journal/internal/immutable/chunks/1-4e9df39a.js",
-  "/journal/internal/immutable/chunks/2-7cf7ffff.js",
-  "/journal/internal/immutable/chunks/3-c230a12e.js",
-  "/journal/internal/immutable/chunks/4-4e6b744c.js",
-  "/journal/internal/immutable/chunks/leaflet-src-1baee3f2.js",
-  "/journal/internal/immutable/chunks/leaflet.markercluster-src-d99a98e5.js",
+  "/journal/internal/immutable/chunks/0-5078b021.js",
+  "/journal/internal/immutable/chunks/1-c5159e87.js",
+  "/journal/internal/immutable/chunks/2-6a00665b.js",
+  "/journal/internal/immutable/chunks/3-a6b19b9a.js",
+  "/journal/internal/immutable/chunks/4-013e68fb.js",
+  "/journal/internal/immutable/chunks/leaflet-src-51a4f289.js",
+  "/journal/internal/immutable/chunks/leaflet.markercluster-src-47dd3f90.js",
   "/journal/internal/immutable/chunks/widget-de120465.js",
   "/journal/internal/immutable/chunks/prism-markup.min-292d1f5b.js",
   "/journal/internal/immutable/chunks/prism-css.min-8e7bd339.js",
@@ -379,13 +379,13 @@ const c = [
   "/journal/internal/immutable/chunks/prism-xquery.min-933a0a41.js",
   "/journal/internal/immutable/chunks/prism-yang.min-38c046cf.js",
   "/journal/internal/immutable/chunks/prism-zig.min-9bffd6db.js"
-], j = [
+], c = [
   "/journal/favicon.png",
   "/journal/icon.png",
   "/journal/icon256x256.png",
   "/journal/manifest.json",
   "/journal/robots.txt"
-], s = "1669129599207", m = self, r = `cache${s}`, u = c.concat(j), o = new Set(u);
+], s = "1669578553834", m = self, r = `cache${s}`, u = j.concat(c), o = new Set(u);
 m.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((a) => a.addAll(u)).then(() => {
