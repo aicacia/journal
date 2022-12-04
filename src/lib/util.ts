@@ -46,10 +46,10 @@ const COLOR_OF_RNG = new XorShiftRng();
 
 export function colorOf(value: any): string {
 	COLOR_OF_RNG.setSeed(hashOf(value));
-	return `rgb(${COLOR_OF_RNG.nextFloatInRange(0, 192)}, ${COLOR_OF_RNG.nextFloatInRange(
-		0,
+	return `rgb(${COLOR_OF_RNG.nextFloatInRange(64, 192)}, ${COLOR_OF_RNG.nextFloatInRange(
+		64,
 		192
-	)}, ${COLOR_OF_RNG.nextFloatInRange(0, 192)})`;
+	)}, ${COLOR_OF_RNG.nextFloatInRange(64, 192)})`;
 }
 
 export function getLocation(): Promise<GeolocationCoordinates> {
