@@ -2,35 +2,43 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="manifest" href="/journal/manifest.json" />
-		<link rel="icon" href="/journal/favicon.png" />
+		<link rel="manifest" href="./manifest.json" />
+		<link rel="icon" href="./favicon.png" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org; font-src 'self' blob: data:; img-src 'self' data: https://*.openstreetmap.org; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org 'sha256-8lnlxJilsMTuqynXYiZf+EoQD4EXJcDmnV//kv5CifY=' 'sha256-bGrVJtT9irOrmQCcDqRq4aNaUmIZjGXDtYZTGgOJdcI='">
-		<link rel="modulepreload" href="/journal/internal/immutable/start-5f39f36e.js">
-		<link rel="modulepreload" href="/journal/internal/immutable/chunks/index-9e73d70e.js">
-		<link rel="modulepreload" href="/journal/internal/immutable/chunks/singletons-eec1638c.js">
-		<link rel="modulepreload" href="/journal/internal/immutable/chunks/shared-b24a923f.js">
-		<link rel="modulepreload" href="/journal/internal/immutable/chunks/preload-helper-41c905a7.js">
-		<script>
-			if ('serviceWorker' in navigator) {
-				addEventListener('load', function () {
-					navigator.serviceWorker.register('/journal/service-worker.js');
-				});
-			}
-		</script>
+		<meta http-equiv="content-security-policy" content="default-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org; font-src 'self' blob: data:; img-src 'self' data: https://*.openstreetmap.org; style-src 'self' 'unsafe-inline'; script-src 'self' https://api.dropboxapi.com https://content.dropboxapi.com https://www.googleapis.com https://*.openstreetmap.org 'sha256-pL0U0EzpnG7i9OrNc+X8qP3dVuyw1MUhZ3MUBZqysIs='">
+		<link rel="modulepreload" href="./internal/immutable/entry/start.852ea571.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index.cf145e90.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/singletons.fed5b7ee.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/paths.a82b3aa9.js">
+		<link rel="modulepreload" href="./internal/immutable/entry/app.20280649.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/preload-helper.41c905a7.js">
 	</head>
 	<body>
 		<div id="app">
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "/journal/internal/immutable/start-5f39f36e.js";
+			<script>
+				{
+					__sveltekit_1u4hi2i = {
+						env: {},
+						assets: "/journal",
+						base: new URL(".", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
 
-			start({
-				env: {},
-				paths: {"assets":"/journal","base":"/journal"},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				version: "1674653308528"
-			});
-		</script></div>
+					Promise.all([
+						import("./internal/immutable/entry/start.852ea571.js"),
+						import("./internal/immutable/entry/app.20280649.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_1u4hi2i.element);
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('./service-worker.js');
+						});
+					}
+				}
+			</script>
+		</div>
 	</body>
 </html>
