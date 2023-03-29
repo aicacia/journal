@@ -7,31 +7,28 @@ export interface IRemoteStorageState {
 }
 
 const remoteStorageStateWritable = writable<IRemoteStorageState>({
-	storage: 'disconnected',
+	storage: remoteStorage.connected ? 'connected' : 'disconnected',
 	wire: 'idle'
 });
 
 export const remoteStorageState = derived(remoteStorageStateWritable, (state) => state);
 
 remoteStorage.addEventListener('connected', () => {
-	updateState('storage', 'connected');
+	updateState({ storage: 'connected' });
 });
 remoteStorage.addEventListener('disconnected', () => {
-	updateState('storage', 'disconnected');
+	updateState({ storage: 'disconnected' });
 });
 remoteStorage.addEventListener('wire-busy', () => {
-	updateState('wire', 'syncing');
+	updateState({ wire: 'syncing' });
 });
 remoteStorage.addEventListener('wire-done', () => {
-	updateState('wire', 'idle');
+	updateState({ wire: 'idle' });
 });
 
-function updateState<K extends Extract<keyof IRemoteStorageState, string>>(
-	key: K,
-	value: IRemoteStorageState[K]
-) {
+function updateState(newState: Partial<IRemoteStorageState>) {
 	remoteStorageStateWritable.update((state) => ({
 		...state,
-		[key as any]: value
+		...newState
 	}));
 }
