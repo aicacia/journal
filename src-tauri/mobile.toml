@@ -1,0 +1,5 @@
+[app]
+name = "journal"
+stylized-name = "Aicacia Journal"
+domain = "journal.aicacia.com"
+template-pack = "wry"
