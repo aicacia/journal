@@ -1,23 +1,23 @@
 const i = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), b = [
-  i + "/internal/immutable/entry/app.c8f6e10f.js",
-  i + "/internal/immutable/chunks/0.020a3cfe.js",
-  i + "/internal/immutable/chunks/1.c873163d.js",
-  i + "/internal/immutable/chunks/2.34d18de6.js",
-  i + "/internal/immutable/chunks/3.5f826e33.js",
-  i + "/internal/immutable/chunks/4.8f0d9571.js",
+  i + "/internal/immutable/entry/app.d3096234.js",
+  i + "/internal/immutable/chunks/0.a06788eb.js",
+  i + "/internal/immutable/chunks/1.6adb859d.js",
+  i + "/internal/immutable/chunks/2.3c73ab32.js",
+  i + "/internal/immutable/chunks/3.eaf7c175.js",
+  i + "/internal/immutable/chunks/4.14289682.js",
   i + "/internal/immutable/assets/IconBase.6bf551a2.css",
-  i + "/internal/immutable/chunks/IconBase.f0336bdf.js",
-  i + "/internal/immutable/chunks/IconBase.svelte_svelte_type_style_lang.3bb47a72.js",
+  i + "/internal/immutable/chunks/IconBase.cd26e059.js",
+  i + "/internal/immutable/chunks/IconBase.svelte_svelte_type_style_lang.74cf0039.js",
   i + "/internal/immutable/chunks/_layout.38454bf1.js",
-  i + "/internal/immutable/chunks/index.d23e9856.js",
-  i + "/internal/immutable/chunks/leaflet-src.b4d8849a.js",
-  i + "/internal/immutable/chunks/leaflet.markercluster-src.02f8f208.js",
-  i + "/internal/immutable/chunks/paths.631a745e.js",
+  i + "/internal/immutable/chunks/index.db26d93d.js",
+  i + "/internal/immutable/chunks/leaflet-src.92fe1261.js",
+  i + "/internal/immutable/chunks/leaflet.markercluster-src.73c168d8.js",
+  i + "/internal/immutable/chunks/paths.7580a606.js",
   i + "/internal/immutable/chunks/preload-helper.41c905a7.js",
-  i + "/internal/immutable/chunks/singletons.2897362e.js",
+  i + "/internal/immutable/chunks/singletons.e6b7571d.js",
   i + "/internal/immutable/chunks/widget.b2efbc62.js",
-  i + "/internal/immutable/entry/start.46ad9b86.js",
-  i + "/internal/immutable/entry/error.svelte.7b104c48.js",
+  i + "/internal/immutable/entry/start.5b87dd87.js",
+  i + "/internal/immutable/entry/error.svelte.2857e591.js",
   i + "/internal/immutable/assets/KaTeX_AMS-Regular.68534840.ttf",
   i + "/internal/immutable/assets/KaTeX_AMS-Regular.30da91e8.woff",
   i + "/internal/immutable/assets/KaTeX_AMS-Regular.0cdd387c.woff2",
@@ -375,19 +375,19 @@ const i = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), b
   i + "/internal/immutable/chunks/prism-yang.min.e490d7da.js",
   i + "/internal/immutable/chunks/prism-zig.min.389e1cec.js",
   i + "/internal/immutable/assets/_layout.77bbaf39.css",
-  i + "/internal/immutable/entry/_layout.svelte.2a8ffd16.js",
+  i + "/internal/immutable/entry/_layout.svelte.7082a165.js",
   i + "/internal/immutable/entry/_layout.ts.c69cb549.js",
-  i + "/internal/immutable/assets/_page.26954dbb.css",
-  i + "/internal/immutable/entry/_page.svelte.4adbdf44.js",
-  i + "/internal/immutable/entry/privacy-policy-page.svelte.9f23e129.js",
-  i + "/internal/immutable/entry/terms-of-service-page.svelte.f52bac9e.js"
+  i + "/internal/immutable/assets/_page.e3d76be3.css",
+  i + "/internal/immutable/entry/_page.svelte.4665a560.js",
+  i + "/internal/immutable/entry/privacy-policy-page.svelte.bc60ef2a.js",
+  i + "/internal/immutable/entry/terms-of-service-page.svelte.1e6804a8.js"
 ], p = [
   i + "/favicon.png",
   i + "/icon.png",
   i + "/icon256x256.png",
   i + "/manifest.json",
   i + "/robots.txt"
-], l = "1680691488906", a = self, r = `cache${l}`, u = b.concat(p), h = new Set(u);
+], l = "1680945829570", a = self, r = `cache${l}`, u = b.concat(p), h = new Set(u);
 a.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((m) => m.addAll(u)).then(() => {
@@ -404,7 +404,7 @@ a.addEventListener("activate", (n) => {
     })
   );
 });
-async function f(n) {
+async function k(n) {
   const m = await caches.open(`offline${l}`);
   try {
     const e = await fetch(n);
@@ -421,6 +421,6 @@ a.addEventListener("fetch", (n) => {
     return;
   const m = new URL(n.request.url), e = m.protocol.startsWith("http"), s = m.hostname === self.location.hostname && m.port !== self.location.port, t = m.host === self.location.host && h.has(m.pathname), c = n.request.cache === "only-if-cached" && !t;
   e && !s && !c && n.respondWith(
-    (async () => t && await caches.match(n.request) || f(n.request))()
+    (async () => t && await caches.match(n.request) || k(n.request))()
   );
 });
