@@ -40,7 +40,7 @@
 				<div
 					class="flex flex-col relative bg-white text-left shadow-xl sm:container"
 					class:m-auto={small}
-					use:clickoutside
+					use:clickoutside={{ event: 'mousedown' }}
 					on:clickoutside={onClickOutside}
 				>
 					<div class="flex flex-row flex-shrink items-start justify-between px-4 pt-4">

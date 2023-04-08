@@ -11,16 +11,24 @@
 
 <script lang="ts">
 	import { isHotkey, withSvelte } from 'svelte-slate';
-	import Slate from 'svelte-slate/plugins/Slate.svelte';
-	import Editable from 'svelte-slate/plugins/Editable.svelte';
+	import {
+		Slate,
+		Editable,
+		HoveringToolbar,
+		toggleMark,
+		MathElement,
+		MATH_TYPE,
+		withMath,
+		DEFAULT_PLUGINS,
+		ImageElement,
+		IMAGE_TYPE,
+		withImages,
+		CodeElement,
+		CODE_TYPE,
+		withCode
+	} from 'svelte-slate/plugins';
 	import { createEditor, type BaseSelection } from 'slate';
 	import { withHistory } from 'slate-history';
-	import { DEFAULT_PLUGINS } from 'svelte-slate/plugins/DEFAULT_PLUGINS';
-	import ImageElement, { IMAGE_TYPE, withImages } from 'svelte-slate/plugins/ImageElement.svelte';
-	import CodeElement, { CODE_TYPE, withCode } from 'svelte-slate/plugins/CodeElement.svelte';
-	import HoveringToolbar from 'svelte-slate/plugins/HoveringToolbar.svelte';
-	import { toggleMark } from 'svelte-slate/plugins/utils';
-	import MathElement, { MATH_TYPE, withMath } from 'svelte-slate/plugins/MathElement.svelte';
 	import Buttons from './Buttons.svelte';
 
 	export let id: string | undefined = undefined;

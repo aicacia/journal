@@ -4,9 +4,7 @@
 	import { isHotkey } from 'svelte-slate';
 	import Button from './Button.svelte';
 	import MdFunctions from 'svelte-icons/md/MdFunctions.svelte';
-	import { isBlockActive } from 'svelte-slate/plugins/utils';
-	import { insertMath, MATH_TYPE } from 'svelte-slate/plugins/MathElement.svelte';
-	import MathEditor from 'svelte-slate/plugins/MathEditor.svelte';
+	import { isBlockActive, insertMath, MATH_TYPE, MathEditor } from 'svelte-slate/plugins';
 
 	const editorContext = getEditorContext();
 	const focusedContext = getFocusedContext();

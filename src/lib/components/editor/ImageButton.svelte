@@ -3,7 +3,7 @@
 	import Button from './Button.svelte';
 	import MdImage from 'svelte-icons/md/MdImage.svelte';
 	import MdCheck from 'svelte-icons/md/MdCheck.svelte';
-	import { insertImage, isUrl } from 'svelte-slate/plugins/ImageElement.svelte';
+	import { insertImage, isUrl } from 'svelte-slate/plugins';
 	import Modal from '../Modal.svelte';
 
 	const editorContext = getEditorContext();
