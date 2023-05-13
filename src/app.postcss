@@ -6,7 +6,7 @@
 	html,
 	body,
 	#app {
-		@apply w-screen h-screen bg-gray-100 dark:bg-gray-800 text-black dark:text-white;
+		@apply relative flex flex-col w-screen h-screen bg-gray-100 dark:bg-gray-950 text-black dark:text-white overflow-hidden;
 	}
 
 	select {
@@ -19,21 +19,20 @@
 		background-position-y: 5px;
 	}
 	input,
-	select {
-		@apply px-3 py-2 rounded-none text-black dark:text-white bg-gray-100 dark:bg-gray-700 text-sm outline-none focus:outline-none w-full;
+	select,
+	textarea {
+		@apply px-3 py-2 rounded-none shadow-inner text-black dark:text-white bg-gray-100 dark:bg-gray-700 text-sm outline-none focus:outline-none;
 	}
 	input[disabled],
-	select[disabled] {
+	select[disabled],
+	textarea[disabled] {
 		@apply opacity-50 cursor-not-allowed;
 	}
 	input[type='checkbox'] {
 		@apply ml-0 mr-4 my-3 text-black;
 	}
 	textarea {
-		@apply px-3 py-2 resize-y text-black dark:text-white bg-gray-100 dark:bg-gray-700 text-sm outline-none focus:outline-none w-full;
-	}
-	textarea[disabled] {
-		@apply opacity-50;
+		@apply resize-y;
 	}
 
 	h1 {
@@ -58,19 +57,28 @@
 
 @layer components {
 	.btn {
-		@apply text-base no-underline px-3 py-2 text-center font-bold uppercase outline-none focus:outline-none ease-linear transition-all duration-150 cursor-pointer;
+		@apply text-base no-underline px-3 py-2 text-center font-bold uppercase outline-none focus:outline-none ease-linear transition-all duration-150 cursor-pointer shadow hover:shadow-md;
 	}
 	.btn[disabled] {
 		@apply opacity-50 cursor-not-allowed;
 	}
 	.btn.primary {
-		@apply bg-gray-900 text-white active:bg-gray-700;
+		@apply bg-gray-900 text-white hover:bg-gray-700;
+	}
+	.btn.primary.active {
+		@apply bg-gray-700;
 	}
 	.btn.secondary {
-		@apply bg-white text-black active:bg-gray-100;
+		@apply bg-white text-black hover:bg-gray-200;
+	}
+	.btn.secondary.active {
+		@apply bg-gray-200;
 	}
 	.btn.danger {
-		@apply bg-red-500 text-white active:bg-red-600;
+		@apply bg-red-500 text-white hover:bg-red-700;
+	}
+	.btn.danger.active {
+		@apply bg-red-700;
 	}
 	.btn.icon {
 		@apply p-1;

@@ -25,13 +25,9 @@ android {
             isDebuggable = true
             isJniDebuggable = true
             isMinifyEnabled = false
-            packagingOptions {
-                jniLibs.keepDebugSymbols.add("*/arm64-v8a/*.so")
-
+            packagingOptions {                jniLibs.keepDebugSymbols.add("*/arm64-v8a/*.so")
                 jniLibs.keepDebugSymbols.add("*/armeabi-v7a/*.so")
-
                 jniLibs.keepDebugSymbols.add("*/x86/*.so")
-
                 jniLibs.keepDebugSymbols.add("*/x86_64/*.so")
             }
         }
@@ -46,11 +42,9 @@ android {
     flavorDimensions.add("abi")
     productFlavors {
         create("universal") {
-            val abiList = findProperty("abiList") as? String
-
             dimension = "abi"
             ndk {
-                abiFilters += abiList?.split(",")?.map { it.trim() } ?: listOf(                    "arm64-v8a",                    "armeabi-v7a",                    "x86",                    "x86_64",
+                abiFilters += (findProperty("abiList") as? String)?.split(",") ?: listOf(                    "arm64-v8a",                    "armeabi-v7a",                    "x86",                    "x86_64",
                 )
             }
         }
@@ -89,8 +83,8 @@ android {
 
 rust {
     rootDirRel = "../../../../"
-    targets = listOf("aarch64", "armv7", "i686", "x86_64")
-    arches = listOf("arm64", "arm", "x86", "x86_64")
+    targets = (findProperty("targetList") as? String)?.split(",") ?: listOf("aarch64", "armv7", "i686", "x86_64")
+    arches = (findProperty("archList") as? String)?.split(",") ?: listOf("arm64", "arm", "x86", "x86_64")
 }
 
 dependencies {
@@ -109,9 +103,11 @@ afterEvaluate {
     android.applicationVariants.all {
         tasks["mergeUniversalReleaseJniLibFolders"].dependsOn(tasks["rustBuildRelease"])
         tasks["mergeUniversalDebugJniLibFolders"].dependsOn(tasks["rustBuildDebug"])
-        productFlavors.filter{ it.name != "universal" }.forEach { _ ->
-            val archAndBuildType = name.capitalize()
-            tasks["merge${archAndBuildType}JniLibFolders"].dependsOn(tasks["rustBuild${archAndBuildType}"])
+        if (findProperty("targetList") == null) {
+            productFlavors.filter{ it.name != "universal" }.forEach { _ ->
+                val archAndBuildType = name.capitalize()
+                tasks["merge${archAndBuildType}JniLibFolders"].dependsOn(tasks["rustBuild${archAndBuildType}"])
+            }
         }
     }
 }

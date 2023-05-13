@@ -1,1 +1,4 @@
 /src/main/java/com/aicacia/aicacia_journal/generated
+/src/main/jniLibs/**/*.so
+/tauri.build.gradle.kts
+/proguard-tauri.pro
