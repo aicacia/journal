@@ -1,82 +1,82 @@
 const i = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), b = [
-  i + "/internal/immutable/entry/app.c397f34d.js",
-  i + "/internal/immutable/chunks/0.74559ea9.js",
-  i + "/internal/immutable/chunks/1.d4ba4324.js",
-  i + "/internal/immutable/chunks/2.5b5f2b36.js",
-  i + "/internal/immutable/chunks/3.b7756379.js",
-  i + "/internal/immutable/chunks/4.560f5364.js",
-  i + "/internal/immutable/assets/IconBase.6bf551a2.css",
-  i + "/internal/immutable/chunks/IconBase.7b636a18.js",
-  i + "/internal/immutable/chunks/IconBase.svelte_svelte_type_style_lang.ea6c567f.js",
-  i + "/internal/immutable/chunks/_layout.38454bf1.js",
-  i + "/internal/immutable/chunks/index.db26d93d.js",
-  i + "/internal/immutable/chunks/leaflet-src.f9a6a64a.js",
-  i + "/internal/immutable/chunks/leaflet.markercluster-src.d372514d.js",
-  i + "/internal/immutable/chunks/paths.34147423.js",
-  i + "/internal/immutable/chunks/preload-helper.41c905a7.js",
-  i + "/internal/immutable/chunks/singletons.0e7e740e.js",
-  i + "/internal/immutable/chunks/widget.b2efbc62.js",
-  i + "/internal/immutable/entry/start.92e7a832.js",
-  i + "/internal/immutable/entry/error.svelte.c9599346.js",
-  i + "/internal/immutable/assets/KaTeX_AMS-Regular.68534840.ttf",
-  i + "/internal/immutable/assets/KaTeX_AMS-Regular.30da91e8.woff",
+  i + "/internal/immutable/entry/app.288c894f.js",
+  i + "/internal/immutable/assets/0.0798ff23.css",
+  i + "/internal/immutable/nodes/0.371a232a.js",
+  i + "/internal/immutable/nodes/1.5f518d29.js",
+  i + "/internal/immutable/assets/2.9cfa2497.css",
+  i + "/internal/immutable/nodes/2.3f000e0c.js",
   i + "/internal/immutable/assets/KaTeX_AMS-Regular.0cdd387c.woff2",
-  i + "/internal/immutable/assets/KaTeX_Caligraphic-Bold.07d8e303.ttf",
-  i + "/internal/immutable/assets/KaTeX_Caligraphic-Bold.1ae6bd74.woff",
+  i + "/internal/immutable/assets/KaTeX_AMS-Regular.30da91e8.woff",
+  i + "/internal/immutable/assets/KaTeX_AMS-Regular.68534840.ttf",
   i + "/internal/immutable/assets/KaTeX_Caligraphic-Bold.de7701e4.woff2",
-  i + "/internal/immutable/assets/KaTeX_Caligraphic-Regular.ed0b7437.ttf",
-  i + "/internal/immutable/assets/KaTeX_Caligraphic-Regular.3398dd02.woff",
+  i + "/internal/immutable/assets/KaTeX_Caligraphic-Bold.1ae6bd74.woff",
+  i + "/internal/immutable/assets/KaTeX_Caligraphic-Bold.07d8e303.ttf",
   i + "/internal/immutable/assets/KaTeX_Caligraphic-Regular.5d53e70a.woff2",
-  i + "/internal/immutable/assets/KaTeX_Fraktur-Bold.9163df9c.ttf",
-  i + "/internal/immutable/assets/KaTeX_Fraktur-Bold.9be7ceb8.woff",
+  i + "/internal/immutable/assets/KaTeX_Caligraphic-Regular.3398dd02.woff",
+  i + "/internal/immutable/assets/KaTeX_Caligraphic-Regular.ed0b7437.ttf",
   i + "/internal/immutable/assets/KaTeX_Fraktur-Bold.74444efd.woff2",
-  i + "/internal/immutable/assets/KaTeX_Fraktur-Regular.1e6f9579.ttf",
-  i + "/internal/immutable/assets/KaTeX_Fraktur-Regular.5e28753b.woff",
+  i + "/internal/immutable/assets/KaTeX_Fraktur-Bold.9be7ceb8.woff",
+  i + "/internal/immutable/assets/KaTeX_Fraktur-Bold.9163df9c.ttf",
   i + "/internal/immutable/assets/KaTeX_Fraktur-Regular.51814d27.woff2",
-  i + "/internal/immutable/assets/KaTeX_Main-Bold.138ac28d.ttf",
-  i + "/internal/immutable/assets/KaTeX_Main-Bold.c76c5d69.woff",
+  i + "/internal/immutable/assets/KaTeX_Fraktur-Regular.5e28753b.woff",
+  i + "/internal/immutable/assets/KaTeX_Fraktur-Regular.1e6f9579.ttf",
   i + "/internal/immutable/assets/KaTeX_Main-Bold.0f60d1b8.woff2",
-  i + "/internal/immutable/assets/KaTeX_Main-BoldItalic.70ee1f64.ttf",
-  i + "/internal/immutable/assets/KaTeX_Main-BoldItalic.a6f7ec0d.woff",
+  i + "/internal/immutable/assets/KaTeX_Main-Bold.c76c5d69.woff",
+  i + "/internal/immutable/assets/KaTeX_Main-Bold.138ac28d.ttf",
   i + "/internal/immutable/assets/KaTeX_Main-BoldItalic.99cd42a3.woff2",
-  i + "/internal/immutable/assets/KaTeX_Main-Italic.0d85ae7c.ttf",
-  i + "/internal/immutable/assets/KaTeX_Main-Italic.f1d6ef86.woff",
+  i + "/internal/immutable/assets/KaTeX_Main-BoldItalic.a6f7ec0d.woff",
+  i + "/internal/immutable/assets/KaTeX_Main-BoldItalic.70ee1f64.ttf",
   i + "/internal/immutable/assets/KaTeX_Main-Italic.97479ca6.woff2",
-  i + "/internal/immutable/assets/KaTeX_Main-Regular.d0332f52.ttf",
-  i + "/internal/immutable/assets/KaTeX_Main-Regular.c6368d87.woff",
+  i + "/internal/immutable/assets/KaTeX_Main-Italic.f1d6ef86.woff",
+  i + "/internal/immutable/assets/KaTeX_Main-Italic.0d85ae7c.ttf",
   i + "/internal/immutable/assets/KaTeX_Main-Regular.c2342cd8.woff2",
-  i + "/internal/immutable/assets/KaTeX_Math-BoldItalic.f9377ab0.ttf",
-  i + "/internal/immutable/assets/KaTeX_Math-BoldItalic.850c0af5.woff",
+  i + "/internal/immutable/assets/KaTeX_Main-Regular.c6368d87.woff",
+  i + "/internal/immutable/assets/KaTeX_Main-Regular.d0332f52.ttf",
   i + "/internal/immutable/assets/KaTeX_Math-BoldItalic.dc47344d.woff2",
-  i + "/internal/immutable/assets/KaTeX_Math-Italic.08ce98e5.ttf",
-  i + "/internal/immutable/assets/KaTeX_Math-Italic.8a8d2445.woff",
+  i + "/internal/immutable/assets/KaTeX_Math-BoldItalic.850c0af5.woff",
+  i + "/internal/immutable/assets/KaTeX_Math-BoldItalic.f9377ab0.ttf",
   i + "/internal/immutable/assets/KaTeX_Math-Italic.7af58c5e.woff2",
-  i + "/internal/immutable/assets/KaTeX_SansSerif-Bold.1ece03f7.ttf",
-  i + "/internal/immutable/assets/KaTeX_SansSerif-Bold.ece03cfd.woff",
+  i + "/internal/immutable/assets/KaTeX_Math-Italic.8a8d2445.woff",
+  i + "/internal/immutable/assets/KaTeX_Math-Italic.08ce98e5.ttf",
   i + "/internal/immutable/assets/KaTeX_SansSerif-Bold.e99ae511.woff2",
-  i + "/internal/immutable/assets/KaTeX_SansSerif-Italic.3931dd81.ttf",
-  i + "/internal/immutable/assets/KaTeX_SansSerif-Italic.91ee6750.woff",
+  i + "/internal/immutable/assets/KaTeX_SansSerif-Bold.ece03cfd.woff",
+  i + "/internal/immutable/assets/KaTeX_SansSerif-Bold.1ece03f7.ttf",
   i + "/internal/immutable/assets/KaTeX_SansSerif-Italic.00b26ac8.woff2",
-  i + "/internal/immutable/assets/KaTeX_SansSerif-Regular.f36ea897.ttf",
-  i + "/internal/immutable/assets/KaTeX_SansSerif-Regular.11e4dc8a.woff",
+  i + "/internal/immutable/assets/KaTeX_SansSerif-Italic.91ee6750.woff",
+  i + "/internal/immutable/assets/KaTeX_SansSerif-Italic.3931dd81.ttf",
   i + "/internal/immutable/assets/KaTeX_SansSerif-Regular.68e8c73e.woff2",
-  i + "/internal/immutable/assets/KaTeX_Script-Regular.1c67f068.ttf",
-  i + "/internal/immutable/assets/KaTeX_Script-Regular.d96cdf2b.woff",
+  i + "/internal/immutable/assets/KaTeX_SansSerif-Regular.11e4dc8a.woff",
+  i + "/internal/immutable/assets/KaTeX_SansSerif-Regular.f36ea897.ttf",
   i + "/internal/immutable/assets/KaTeX_Script-Regular.036d4e95.woff2",
-  i + "/internal/immutable/assets/KaTeX_Size1-Regular.95b6d2f1.ttf",
-  i + "/internal/immutable/assets/KaTeX_Size1-Regular.c943cc98.woff",
+  i + "/internal/immutable/assets/KaTeX_Script-Regular.d96cdf2b.woff",
+  i + "/internal/immutable/assets/KaTeX_Script-Regular.1c67f068.ttf",
   i + "/internal/immutable/assets/KaTeX_Size1-Regular.6b47c401.woff2",
-  i + "/internal/immutable/assets/KaTeX_Size2-Regular.a6b2099f.ttf",
-  i + "/internal/immutable/assets/KaTeX_Size2-Regular.2014c523.woff",
+  i + "/internal/immutable/assets/KaTeX_Size1-Regular.c943cc98.woff",
+  i + "/internal/immutable/assets/KaTeX_Size1-Regular.95b6d2f1.ttf",
   i + "/internal/immutable/assets/KaTeX_Size2-Regular.d04c5421.woff2",
-  i + "/internal/immutable/assets/KaTeX_Size3-Regular.500e04d5.ttf",
+  i + "/internal/immutable/assets/KaTeX_Size2-Regular.2014c523.woff",
+  i + "/internal/immutable/assets/KaTeX_Size2-Regular.a6b2099f.ttf",
   i + "/internal/immutable/assets/KaTeX_Size3-Regular.6ab6b62e.woff",
-  i + "/internal/immutable/assets/KaTeX_Size4-Regular.c647367d.ttf",
-  i + "/internal/immutable/assets/KaTeX_Size4-Regular.99f9c675.woff",
+  i + "/internal/immutable/assets/KaTeX_Size3-Regular.500e04d5.ttf",
   i + "/internal/immutable/assets/KaTeX_Size4-Regular.a4af7d41.woff2",
-  i + "/internal/immutable/assets/KaTeX_Typewriter-Regular.f01f3e87.ttf",
-  i + "/internal/immutable/assets/KaTeX_Typewriter-Regular.e14fed02.woff",
+  i + "/internal/immutable/assets/KaTeX_Size4-Regular.99f9c675.woff",
+  i + "/internal/immutable/assets/KaTeX_Size4-Regular.c647367d.ttf",
   i + "/internal/immutable/assets/KaTeX_Typewriter-Regular.71d517d6.woff2",
+  i + "/internal/immutable/assets/KaTeX_Typewriter-Regular.e14fed02.woff",
+  i + "/internal/immutable/assets/KaTeX_Typewriter-Regular.f01f3e87.ttf",
+  i + "/internal/immutable/nodes/3.bd0a3a21.js",
+  i + "/internal/immutable/nodes/4.e686196e.js",
+  i + "/internal/immutable/assets/IconBase.6bf551a2.css",
+  i + "/internal/immutable/chunks/IconBase.37384156.js",
+  i + "/internal/immutable/chunks/IconBase.svelte_svelte_type_style_lang.e55a11b1.js",
+  i + "/internal/immutable/chunks/index.db26d93d.js",
+  i + "/internal/immutable/chunks/leaflet-src.fdea0a67.js",
+  i + "/internal/immutable/chunks/leaflet.markercluster-src.7e45e5e6.js",
+  i + "/internal/immutable/chunks/paths.2ec88b53.js",
+  i + "/internal/immutable/chunks/preload-helper.41c905a7.js",
+  i + "/internal/immutable/chunks/singletons.0cf23d45.js",
+  i + "/internal/immutable/chunks/widget.efdc72bb.js",
+  i + "/internal/immutable/entry/start.d6b62328.js",
   i + "/internal/immutable/chunks/prism-abap.min.7dc4f019.js",
   i + "/internal/immutable/chunks/prism-abnf.min.28566e4e.js",
   i + "/internal/immutable/chunks/prism-actionscript.min.d73fc6b8.js",
@@ -373,54 +373,47 @@ const i = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), b
   i + "/internal/immutable/chunks/prism-xquery.min.2bd92001.js",
   i + "/internal/immutable/chunks/prism-yaml.min.7ff49f07.js",
   i + "/internal/immutable/chunks/prism-yang.min.e490d7da.js",
-  i + "/internal/immutable/chunks/prism-zig.min.389e1cec.js",
-  i + "/internal/immutable/assets/_layout.77bbaf39.css",
-  i + "/internal/immutable/entry/_layout.svelte.32b90775.js",
-  i + "/internal/immutable/entry/_layout.ts.c69cb549.js",
-  i + "/internal/immutable/assets/_page.e3d76be3.css",
-  i + "/internal/immutable/entry/_page.svelte.932082bb.js",
-  i + "/internal/immutable/entry/privacy-policy-page.svelte.d6c145b9.js",
-  i + "/internal/immutable/entry/terms-of-service-page.svelte.48479dde.js"
+  i + "/internal/immutable/chunks/prism-zig.min.389e1cec.js"
 ], p = [
   i + "/favicon.png",
   i + "/icon.png",
   i + "/icon256x256.png",
   i + "/manifest.json",
   i + "/robots.txt"
-], l = "1681057716610", a = self, r = `cache${l}`, u = b.concat(p), h = new Set(u);
-a.addEventListener("install", (n) => {
+], l = "1683988432928", s = self, r = `cache${l}`, u = b.concat(p), h = new Set(u);
+s.addEventListener("install", (n) => {
   n.waitUntil(
     caches.open(r).then((m) => m.addAll(u)).then(() => {
-      a.skipWaiting();
+      s.skipWaiting();
     })
   );
 });
-a.addEventListener("activate", (n) => {
+s.addEventListener("activate", (n) => {
   n.waitUntil(
     caches.keys().then(async (m) => {
       for (const e of m)
         e !== r && await caches.delete(e);
-      a.clients.claim();
+      s.clients.claim();
     })
   );
 });
-async function k(n) {
+async function f(n) {
   const m = await caches.open(`offline${l}`);
   try {
     const e = await fetch(n);
     return m.put(n, e.clone()), e;
   } catch (e) {
-    const s = await m.match(n);
-    if (s)
-      return s;
+    const a = await m.match(n);
+    if (a)
+      return a;
     throw e;
   }
 }
-a.addEventListener("fetch", (n) => {
+s.addEventListener("fetch", (n) => {
   if (n.request.method !== "GET" || n.request.headers.has("range"))
     return;
-  const m = new URL(n.request.url), e = m.protocol.startsWith("http"), s = m.hostname === self.location.hostname && m.port !== self.location.port, t = m.host === self.location.host && h.has(m.pathname), c = n.request.cache === "only-if-cached" && !t;
-  e && !s && !c && n.respondWith(
-    (async () => t && await caches.match(n.request) || k(n.request))()
+  const m = new URL(n.request.url), e = m.protocol.startsWith("http"), a = m.hostname === self.location.hostname && m.port !== self.location.port, t = m.host === self.location.host && h.has(m.pathname), c = n.request.cache === "only-if-cached" && !t;
+  e && !a && !c && n.respondWith(
+    (async () => t && await caches.match(n.request) || f(n.request))()
   );
 });
